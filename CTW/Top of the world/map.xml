@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Top of the world</name>
+<version>1.0.0</version>
+<objective>
+    Take the wool from the enemy wool rooms and place it on your victory monument while defending your own wool.
+</objective>
+<authors>
+    <author>12_zombies</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">lord_creeper01</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="20">Blue Team</team>
+    <team color="dark purple" max="20">Purple Team</team>
+</teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0" damage="-3000">stone sword</item>
+        <item slot="1" damage="-3000">bow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3">iron axe</item>
+        <item slot="4">iron shovel</item>
+        <item slot="5" amount="64">log</item>
+        <item slot="8" amount="64">cooked beef</item>
+        <item slot="28" amount="64">arrow</item>
+        <potion duration="5" amplfier="1">heal</potion>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="334cb2">leather helmet</helmet>
+        <chestplate color="334cb2">leather chesplate</chestplate>
+    </kit>
+    <kit name="purple" parents="spawn">
+        <helmet color="7f3fb2">leathet helmet</helmet>
+        <chestplate color="7f3fb2">leather helmet</chestplate>
+    </kit>
+</kits>
+<itemremove>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>apple</item>
+    <item>cooked beef</item>
+    <item>leather helmet</item>
+    <item>leather chesplate</item>
+    <item>yellow flower</item>
+    <item>red rose</item>
+</itemremove>
+<toolrepair>
+    <tool>diamond pickaxe</tool>
+    <tool>iron axe</tool>
+    <tool>iron shovel</tool>
+</toolrepair>
+<spawns>
+    <spawn team="blue" kit="blue">
+        <point yaw="90">
+            <cylinder base="132,16,-18" radius="1" height="0"/>
+        </point>
+    </spawn>
+    <spawn team="purple" kit="purple">
+        <point yaw="-90">
+            <cylinder base="-44,16,-18" radius="1" height="0"/>
+        </point>
+    </spawn>
+    <default>
+        <point yaw="180">
+            <cylinder base="44,54,-19" radius="2" height="0"/>
+        </point>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+    <filter name="only-purple">
+        <team>purple</team>
+    </filter>
+    <filter name="only-purple-usage">
+        <not>
+            <all>
+                <any>
+                    <block>chest</block>
+                    <block>workbench</block>
+                </any>
+                <team>blue</team>
+            </all>
+        </not>
+    </filter>
+    <filter name="only-blue-usage">
+        <not>
+            <all>
+                <any>
+                    <block>chest</block>
+                    <block>workbench</block>
+                </any>
+                <team>purple</team>
+            </all>
+        </not>
+    </filter>
+    <filters>
+    <filter name="no-void" parents="allow-all">
+        <deny><void/></deny>
+    </filter>
+</filters>
+</filters>
+<regions>
+<!--  void protection  -->
+   <union name="blue-wool-rooms">
+        <rectangle name="orange-wool" max="143,-33" min="162,-21"/>
+        <rectangle name="lime-wool" max="162,-15" min="143,-3"/>
+    </union>
+    <union name="purple-wool-rooms">
+        <rectangle name="red-wool" max="-74,-33" min="-55,-21"/>
+        <rectangle name="yellow-wool" max="-55,-3" min="-74,-15"/>
+    </union>
+    <union name="map">
+        <rectangle name="middle" max="-4,-47" min="92,11"/>
+        <region name="red-wool-rooms"/>
+        <region name="blue-wool-rooms"/>
+        <region name="purple-spawn"/>
+        <region name="blue-spawn"/>
+    </union>
+<!--  purple wool rooms  -->
+    <apply block="only-purple" use="only-purple-usage">
+        <region name="blue-wool-rooms"/>
+    </apply>
+    <apply enter="only-purple" message="You may not enter your own wool room!">
+        <region name="blue-wool-rooms"/>
+    </apply>
+<!--  Blue wool rooms  -->
+    <apply block="only-blue" use="only-blue-usage">
+        <region name="purple-wool-rooms"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter your own wool room!">
+        <region name="purple-wool-rooms"/>
+    </apply>
+<!--  spawn protection  -->
+    <apply block="deny-blocks" message="You may not modify the spawns">
+        <rectangle name="blue-spawn" max="121,-26" min="136,-10"/>
+    </apply>
+    <apply block="deny-blocks" message="You may not modify the spawns">
+        <rectangle name="purple-spawn" max="-33,-10" min="-48,-26"/>
+    </apply>
+    <apply enter="only-purple" message="You may not enter the other team´s spawn">
+        <region name="purple-spawn"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter the other team´s spawn">
+        <region name="blue-spawn"/>
+    </apply>
+<!--  Wall Between wool rooms  -->
+    <apply enter="deny-all" block="deny-all" message="You may not jump to the other wool room!">
+        <rectangle name="b-wall" max="162,-17" min="143,-19"/>
+        <rectangle name="p-wall" max="-55,-17" min="-74,-19"/>
+    </apply>
+<!--  Void  -->
+    <apply block="no-void" message="You may not build in the void!">
+        <negative>
+            <region name="map"/>
+        </negative>
+    </apply>
+</regions>
+<maxbuildheight>45</maxbuildheight>
+<wools>
+    <wool team="blue" color="red">
+        <block location="129,16,-25"/>
+    </wool>
+    <wool team="blue" color="yellow">
+        <block location="129,16,-12"/>
+    </wool>
+    <wool team="purple" color="lime">
+        <block location="-42,16,-12"/>
+    </wool>
+    <wool team="blue" color="orange">
+        <block location="-42,16,-25"/>
+    </wool>
+</wools>
+</map>
