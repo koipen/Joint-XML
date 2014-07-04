@@ -127,7 +127,9 @@
         <region name="blue-base"/>
     </union>
     <apply block="deny-all" message="You may not build outside the map">
-        <region name="map"/>
+        <negative>
+            <region name="map"/>
+        </negative>
     </apply>
 <!--  red wool rooms  -->
     <apply block="only-red" use="only-red-usage">
