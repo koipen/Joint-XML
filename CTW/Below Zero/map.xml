@@ -131,17 +131,17 @@
     </apply>
 <!--  red wool rooms  -->
     <apply block="only-red" use="only-red-usage">
-        <region name="red-wool-rooms"/>
+        <region name="blue-wool-rooms"/>
     </apply>
     <apply enter="only-red" message="You may not enter your own wool room!">
-        <region name="red-wool-rooms"/>
+        <region name="blue-wool-rooms"/>
     </apply>
 <!--  Blue wool rooms  -->
     <apply block="only-blue" use="only-blue-usage">
-        <region name="blue-wool-rooms"/>
+        <region name="red-wool-rooms"/>
     </apply>
     <apply enter="only-blue" message="You may not enter your own wool room!">
-        <region name="blue-wool-rooms"/>
+        <region name="red-wool-rooms"/>
     </apply>
 <!--  spawn protection  -->
     <apply block="allow-iron" message="You may only modify iron blocks in the base">
