@@ -49,7 +49,7 @@
 <toolrepair>
     <tool>diamond pickaxe</tool>
     <tool>iron axe</tool>
-    <tool>iron shovel</tool>
+    <tool>iron spade</tool>
 </toolrepair>
 <spawns>
     <spawn team="blue" kit="blue">
