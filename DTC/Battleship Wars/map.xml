@@ -51,8 +51,10 @@
         <item>leather chestplate</item>
         <item>arrow</item>
         <item>cooked beef</item>
-	    <item>iron sword</item>
-	    <item>bow</item>
+        <item>iron sword</item>
+        <item>bow</item>
+        <item>coal</item>
+        <item>coal ore</item>
     </itemremove>
 <regions>
     <!-- Spawn prot-->
