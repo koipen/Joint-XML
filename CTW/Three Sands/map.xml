@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Three Sands</name>
+<version>1.0.0</version>
+<objective>Capture both of the enemies wools and place them on your victory monument.</objective>
+<authors>
+    <author>gushingblood</author>
+    <author>OctoOoze</author>
+</authors>
+<contributors>
+    <contributor contribution="Wool rooms">Linehodres</contributor>
+    <contributor contribution="Aesthetics">_ApplePies_</contributor>
+</contributors>
+<teams>
+   <team color="dark red" max="25" max-overfill="30">Red Team</team>
+   <team color="blue" max="25" max-overfill="30">Blue Team</team>
+</teams>
+ <kits>
+    <kit name="spawn" force="true">
+        <item slot="0">iron sword</item>
+        <item slot="1" enchantment="arrow infinite">bow</item>
+        <item slot="2" enchantment="dig speed:1">iron pickaxe</item>
+        <item slot="3">fishing rood</item>
+        <item slot="4" amount="32">carrot</item>
+        <item slot="5" amount="64" damage="3">log</item>
+        <item slot="8">water bucket</item>
+        <item slot="30">iron axe</item>
+        <item slot="28">arrow</item>
+        <chestplate>iron chestplate</chestplate>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet color="cd0000">leather helmet</helmet>
+        <leggings color="cd0000">leather leggings</leggings>
+        <boots color="cd0000">leather boots</boots>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="334CB2">leather helmet</helmet>
+        <leggings color="334CB2">leather leggings</leggings>
+        <boots color="334CB2">leather boots</boots>
+    </kit>
+</kits>
+<tnt>
+    <blockdamage>true</blockdamage>
+</tnt>
+<gamerules>
+    <doDaylightCycle>false</doDaylightCycle>
+</gamerules>
+<maxbuildheight>38</maxbuildheight>
+<itemremove>
+    <item>sandstone</item>
+    <item>double step</item>
+    <item damage="3">log</item>
+</itemremove>
+<item>diamond sword</item>
+<tutorial>
+    <stage title="Capture the Wool">
+        <message>
+            <line>`rThis map is a `a`lCapture the Wool `r(CTW) map</line>
+            <line>To win you must take the wool from the enemies wool room and place it on your victory monument.</line>
+        </message>
+    </stage>
+    <stage title="Objective">
+        <message>
+            <line> This is a `a`lWool Rooms</line>
+            <line> Place the wool onto your `1`lVictory Monument `rto win the game.
+        </message>
+        <teleport>
+                <point yaw="90">287,20,708</point>
+        </teleport>
+    </stage>
+</tutorial>
+<filters>
+    <filter name="only-red" parents="deny-players">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue" parents="deny-players">
+        <team>blue</team>
+    </filter>
+</filters>
+<spawns>
+   <spawn team="red" kit="red" yaw="0">
+        <cuboid min="242,37,731" max="238,37,727"/>
+    </spawn>       
+    <spawn team="blue" kit="blue" yaw="-180">
+        <cuboid min="242,37,839" max="238,37,835"/>
+    </spawn>
+    <default yaw="-90">
+        <block>"240,83,783"</block>
+    </default>
+</spawns>
+<regions>
+    <cuboid name="yellow wool" min="200,16,853" max="208,23,862"/>
+    <cuboid name="orange wool" min="280,16,853" max="272,23,862"/>
+    <cuboid name="light blue wool" min="200,16,713" max="272,23,704"/>
+    <cuboid name="cyan wool" min="280,16,713" max="272,23,704"/>
+    <apply enter="only-red">
+        <region name="red-spawn"/> 
+        <region name="cyan wool"/> 
+        <region name="light blue wool"/>
+    </apply>
+    <apply enter="only-blue">
+        <region name="blue-spawn"/> 
+        <region name="orange wool"/> 
+        <region name="yellow wool"/>
+    </apply>
+</regions>
+<portals>
+    <portal yaw="-90" x="@253" y="@28" z="@732">
+        <cuboid min="267,9,730" max="267,4,731"/>
+    </portal>
+    <portal yaw="-90" x="@253" y="@28" z="834">
+        <cuboid min="267,9,835" max="267,4,836"/>
+    </portal>
+    <portal yaw="90" x="227" y="28" z="834">
+        <cuboid min="213,9,835" max="213,4,836"/>
+    </portal>
+    <portal yaw=-90 x="227" y="228" z="732">
+        <cuboid min="213,9,730" max="213,4,731"/>
+    </portal>
+</portals>
+</map>
