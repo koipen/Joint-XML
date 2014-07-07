@@ -61,7 +61,7 @@
         <cuboid name="blue-spawn" max="-924,14,-181" min="-920,10,-185"/>
     </apply>
         <!-- Void-->
-    <apply block="deny-all" message="You may not build outside of the map boundry">
+    <apply block="deny-blocks deny-world" message="You may not build outside of the map boundry">
         <negative>
             <rectangle name="playable" min="-835,-146" max="-945,-261" />
         </negative>
