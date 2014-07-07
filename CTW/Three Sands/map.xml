@@ -108,13 +108,13 @@
     <portal yaw="-90" x="@253" y="@28" z="@732">
         <cuboid min="267,9,730" max="267,4,731"/>
     </portal>
-    <portal yaw="-90" x="@253" y="@28" z="834">
+    <portal yaw="-90" x="@253" y="@28" z="@834">
         <cuboid min="267,9,835" max="267,4,836"/>
     </portal>
-    <portal yaw="90" x="227" y="28" z="834">
+    <portal yaw="90" x="@227" y="@28" z="@834">
         <cuboid min="213,9,835" max="213,4,836"/>
     </portal>
-    <portal yaw=-90 x="227" y="228" z="732">
+    <portal yaw=-90 x="@227" y="@228" z="@732">
         <cuboid min="213,9,730" max="213,4,731"/>
     </portal>
 </portals>
