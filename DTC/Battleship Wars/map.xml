@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Battleship Wars</name>
+<version>1.3.0</version>
+<objective>Leak the lava from both of the enemy's cores</objective>
+<authors>
+    <author>Kitatist</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">lord_creeper01</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="45" max-overfill="50">Blue Team</team>
+    <team color="dark red" max="45" max-overfill="50">Red Team</team>
+</teams>
+<spawns>
+    <spawn team="red" kit="red" yaw="180">
+        <cylinder base="-922,13,-183" radius="1" height="0"/>
+	</spawn>
+    <spawn team="blue" kit="blue" yaw="0">
+        <cylinder base="-858,13,-224" radius="1" height="0"/>
+	</spawn>
+    <default yaw="180">
+        <cylinder base="-897.5,90,-192.5" radius="1" height="0"/>
+    </default>
+</spawns>
+<kits>
+    <kit name="spawn" force="true">
+        <item slot="0" damage="-3000" name="war knife">iron sword</item>
+        <item slot="1" damage="-3000" name="Standard M60" enchantment="arrow infinite:1">bow</item>
+        <item slot="2" name="Soldier´s Pickaxe" enchantment="dig speed:1;silk touch:1">iron pickaxe</item>
+        <item slot="8" name="Soldier´s Food" amount="32">cooked beef</item>
+        <item slot="28">arrow</item>
+        <potion duration="3" amplifier="1">heal</potion>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet name="Soldier´s Cap" color="993333">leather helmet</helmet>
+        <chestplate name="Soldier´s Tunic" color="993333">leather chestplate</chestplate>
+        <item slot="3" damage="14">stained clay</item>
+        <item slot="4" damage="14">stained glass</item>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet name="Soldier´s Cap" color="334cb2">leather helmet</helmet>
+        <chestplate name="Soldier´s Tunic" color="334cb2">leather chestplate</chestplate>
+        <item slot="3" damage="11">stained clay</item>
+        <item slot="4" damage="11">stained glass</item>
+    </kit>
+</kits>
+    <itemremove>
+        <item>leather helmet</item>
+        <item>leather chestplate</item>
+        <item>arrow</item>
+        <item>cooked beef</item>
+	    <item>iron sword</item>
+	    <item>bow</item>
+    </itemremove>
+<regions>
+    <!-- Spawn prot-->
+    <apply block="deny-all" message="You may not break the spawns">
+        <cuboid name="red-spawn" max="-856,14,-226" min="-860,10,-222"/>
+        <cuboid name="blue-spawn" max="-924,14,-181" min="-920,10,-185"/>
+    </apply>
+        <!-- Void-->
+    <apply block="deny-all" message="You may not build outside of the map boundry">
+        <negative>
+            <rectangle name="playable" min="-835,-146" max="-945,-261" />
+        </negative>
+    </apply>
+</regions>
+<cores material="obsidian" leak="4" mode-changes="true">
+    <cores team="red">
+        <core name="Helicopter Core">
+            <cuboid min="-911,27,-165" max="-916,20,-160"/>
+        </core>
+        <core name="Container Core">
+            <cuboid min="-911,19,-236" max="-916,13,-241"/>
+        </core>
+    </cores>
+    <cores team="blue">
+        <core name="Helicopter Core">
+            <cuboid min="-864,20,-242" max="-869,27,-247"/>
+        </core>
+        <core name="Container Core">
+            <cuboid min="-864,13,-166" max="-869,19,-171"/>
+        </core>
+    </cores>
+</cores>
+<modes>
+    <mode after="15m" material="ender stone" name="`5END STONE CORE MODE"/>
+	<mode after="30m" material="gold block" name="`6GOLD CORE MODE"/>
+    <mode after="45m" material="glass" name="`bGLASS CORE MODE"/>
+</modes>
+<maxbuildheight>55</maxbuildheight>
+<gamerules>
+    <doDaylightCycle>false</doDaylightCycle>
+    <doFireTick>false</doFireTick>
+</gamerules>
+</map>
