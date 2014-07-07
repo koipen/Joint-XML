@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Helix</name>
+<version>1.0</version>
+<objective>Be the team with the highest percentage of the monument destroyed.</objective>
+<authors>
+    <author>ShayneSteer44</author>
+    <author>chiddybangmaster</author>
+    <author>tankknightv5</author>
+</authors>
+<contributors>
+    <contributor contribution="Endless Feedback">tankknightv5</contributor>
+</contributors>
+<teams>
+    <team color="yellow" max="4" max-overfill="6">Yellow Team</team>
+    <team color="green" max="4" max-overfill="6">Lime Team</team>
+    <team color="dark purple" max="4" max-overfill="6">Purple Team</team>
+    <team color="dark blue" max="4" max-overfill="6">Blue Team</team>
+</teams>
+<score>
+    <time>750s</time>
+</score>
+<kits>
+<!-- Default Kit -->
+<kits>
+    <kit name="spawn">
+        <item slot="0" enchantment="DIG_SPEED:15;DAMAGE_ALL:20" name="`c`lProton Laser Drill" lore="`9Used to destroy the monument, also a one hit kit!">diamond pickaxe</item>
+        <item slot="4" amount="1" name="`4Landmine `6| `bFuse: 1s `6| `bPower: 2" lore="`9Use this strategically! It could be helpful...">tnt</item>
+        <item slot="8" amount="64">golden carrot</item>
+        <potion duration="5" amplifier="5">damage resistance</potion>
+        <potion duration="5" amplifier="5">regeneration</potion>
+    </kit>
+    <kit parents="spawn" name="yellow">
+        <helmet color="E5E533" damage="-3000">leather helmet</helmet>
+        <chestplate color="E5E533" damage="-3000">leather chestplate</chestplate>
+        <leggings color="E5E533" damage="-3000">leather leggings</leggings>
+        <boots color="E5E533" damage="-3000">leather boots</boots>
+    </kit>
+    <kit parents="spawn" name="blue">
+        <helmet color="334CB2" damage="-3000">leather helmet</helmet>
+        <chestplate color="334CB2" damage="-3000">leather chestplate</chestplate>
+        <leggings color="334CB2" damage="-3000">leather leggings</leggings>
+        <boots color="334CB2" damage="-3000">leather boots</boots>
+    </kit>
+    <kit parents="spawn" name="purple">
+        <helmet color="7F3FB2" damage="-3000">leather helmet</helmet>
+        <chestplate color="7F3FB2" damage="-3000">leather chestplate</chestplate>
+        <leggings color="7F3FB2" damage="-3000">leather leggings</leggings>
+        <boots color="7F3FB2" damage="-3000">leather boots</boots>
+    </kit>
+    <kit parents="spawn" name="lime">
+        <helmet color="7FCC19" damage="-3000">leather helmet</helmet>
+        <chestplate color="7FCC19" damage="-3000">leather chestplate</chestplate>
+        <leggings color="7FCC19" damage="-3000">leather leggings</leggings>
+        <boots color="7FCC19" damage="-3000">leather boots</boots>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="purple" yaw="130" kit="purple">
+        <cuboid min="15.5,86,14.5" max="15.5,86,14.5"/>
+    </spawn>
+    <spawn team="blue" yaw="-125" kit="blue">
+        <cuboid min="-13.5,86,16.5" max="-13.5,86,16.5"/>
+    </spawn>
+    <spawn team="lime" yaw="-35" kit="lime">
+        <cuboid min="-14.5,86,-13.5" max="-14.5,86,-13.5"/>
+    </spawn>
+    <spawn team="yellow" yaw="50" kit="yellow">
+        <cuboid min="14.5,86,-13.5" max="14.5,86,-13.5"/>
+    </spawn>
+</spawns>
+<filters>
+	<filter name="deny-breaking" parents="deny-blocks"/>
+</filters>
+<regions>
+    <apply blocks="deny-breaking" message="You can only break blocks on the monument!">
+        <negative>
+            <cuboid min="-15,14,16" max="15,5,-16"/>
+            <region name="no-breaking-area"/>
+        </negative>
+    </apply>
+    <apply block="deny-all" message="You may not modify the spawns!">
+        <negative>
+            <rectangle min="-16,-15" max="16,15"/>
+            <region name="spawn-areas"/>
+        </negative>
+    </apply>
+</regions>
+<tnt>
+    <instantignite>on</instantignite>
+    <fuse>1s</fuse>
+    <power>2</power>
+    <blockdamage>false</blockdamage>
+</tnt>
+<itemremove>
+    <item>leather helmet</item>
+    <item>leather chesplate</item>
+    <item>leather leggings</>
+    <item>leather boots</item>
+    <item>diamond pickaxe</item>
+</itemremove>
+<disabledamage>
+    <damage>fall</damage>
+</disabledamage>
+<killreward>
+    <item name="`4Landmine `6| `bFuse: 1s `6| `bPower: 2" lore="`9Use this strategically! It could be helpful...">tnt</item>
+</killreward>
+<!-- End of Map XML -->
+</map>
