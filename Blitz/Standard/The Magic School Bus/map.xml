@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>The Magic School Bus</name>
+<version>1.0.0</version>
+<objective>Blitz | Run and Hide from Ms. Frizzle for 7 minutes</objective>
+<authors>
+    <author>triplezko</author>
+    <author>Winnerizor</author>
+    <author>Leemonadeport1</author>
+    <author>xCLAFx</author>
+    <author>Panda1084</author>
+</authors>
+<blitz>
+    <time>7m</time>
+    <lives>1</lives>
+</blitz>
+<timelock>on</timelock>
+<teams>
+   <team color="dark red" max="1" max-overfill="1">Ms. Frizzle</team>
+   <team color="blue" max="12" max-overfill="12">The Mexican Jumping Beans</team>
+</teams>
+<kits>
+    <kit name="beans">
+        <item slot="0" name="`aPoking Stick" enchantment="knockback:1">stick</item>
+        <item slot="1" damage="16421">potion</item>
+        <item slot="2" damage="16421">potion</item>
+        <item slot="5" amount="16" name="`aDodgeballs">snow ball</item>
+        <item slot="6" amount="16" name="`aDodgeballs">snow ball</item>
+        <item slot="7" amount="16" name="`aDodgeballs">snow ball</item>
+        <item slot="8" amount="16" name="`aDodgeballs">snow ball</item>
+        <potion duration="2" amplifier="1">heal</potion>
+        <chestplate color="fff33" name="`rStriped Sweater">leather chestplate</chestplate>
+        <leggings color="3300ff" name="`rJeans">leather leggings</leggings>
+        <boots color="606060" name="`rSneakers">leather boots</boots>
+    </kit>
+    <kit name="frizzle" parents="spawn">
+        <item slot="0" name="`aRuler" enchantment="damage all:3">wooden sword</item>
+        <item slot="1" name="`aPencil Launcher" enchantment="arrow infinite:1">bow</item>
+        <item slot="28">arrow</item>
+        <potion duration="oo" amplifier="3">damage resistance</potion>
+        <helmet color="cc6600" name="`rFrizzy Hair" locked="true">leather helmet</helmet>
+        <chestplate color="660099" name="`rPurple Dress" locked="true">leather chestplate</chestplate>
+        <leggings color="660099" name="`rPurple Dress" locked="true">leather leggings</leggings>
+        <boots color="cc0000" name="`rHigh Heel Shoes" locked="true">leather boots</boots>
+    </kit>
+</kits>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<spawns>
+    <spawn team="Frizzle" kit="frizzle" yaw="-90">
+        <cylinder base="-368,30,-249" radius="3" height="2"/>
+    </spawn>
+    <spawn team="mexicans" kit="beans" yaw="-90">
+        <cuboid min="-381,29,-217" max="-426,29,-256"/>
+    </spawn>
+    <default yaw="90">
+        <cuboid min="-312,34,-215" max="-310,33,-217"/>
+    </default>
+</spawns>
+<toolrepair>
+    <tool>wooden sword</tool>
+    <tool>bow</tool>
+</toolrepair>
+<itemremove>
+    <item>leather chesplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>snow ball</item>
+    <item>stick</item>
+    <item>potion</item>
+</itemremove>
+<regions>
+    <apply block="deny-all">
+        <rectangle min="-oo,-oo" max="oo,oo"/>
+    </apply>
+</regions>
+<include src="blitz-global.xml"/>
+</map>
