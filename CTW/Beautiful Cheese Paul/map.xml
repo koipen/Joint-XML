@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Beautiful Cheese Paul</name>
+<version>1.0.0</version>
+<objective>
+    Capture the enemy's two wools and place them on your victory monument!
+</objective>
+<authors>
+    <author>MrPenguin_Man</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">lord_creeper01</contributor>
+</contributors>
+<teams>
+    <team color="blue" max="16">Blue Team</team>
+    <team color="dark red" max="16">Red Team</team>
+</teams>
+<spawns>
+    <spawn team="blue" yaw="-90">
+        <cylinder base="-1452.5,8,-688.5" radius="2" height="0"/>
+    </spawn>
+    <spawn team="red" yaw="90">
+        <cylinder base="-1306.5,8,-688.5" radius="2" height="0"/>
+    </spawn>
+    <default yaw="180">
+        <cylinder base="-1380,42,-732" radius="1" height="0"/> 
+    </default>
+</spawns>
+<kits>
+    <kit name="spawn">
+        <item slot="0">iron sword</item>
+        <item slot="1">bow</item>
+        <item slot="2" enchantment="dig speed:2">iron pickaxe</item>
+        <item slot="3" amount="64">arrow</item>
+        <item slot="4" amount="64">arrow</item>
+        <item slot="5" amount="64">arrow</item>
+        <item slot="6" amount="64" damage="2">log</item>
+        <item slot="7" amount="64">glass</item>
+        <item slot="8" amount="64">cooked beef</item>
+    </kit>
+</kits>
+<filters>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="no-void">
+        <deny>
+            <void/>
+        </deny>
+    </filter>
+</filters>
+<regions>
+    <union name="blue-wools">
+        <rectangle name="orange-wool-room" max="-1456,-739" min="-1447,-730"/>
+        <rectangle name="lime-wool-room" max="-1456,-639" min="-1477,-648"/>
+    </union>
+    <union name="red-wools">
+        <rectangle name="purple-wool-room" max="-1303,-638" min="-1312,-647"/>
+        <rectangle name="yellow-wool-room" max="-1303,-738" min="-1312,-729"/>
+    </union>
+    <apply block="no-void" message="You may not build in the void">
+        <negative>
+            <rectangle min="-1324,-708" max="-1435,-669"/>
+            <region name="blue-wools"/>
+            <region name="red-wools"/>
+            <region name="red-spawn"/>
+            <region name="blue-spawn">
+        </negative>
+    </apply>
+    <apply block="deny-all" message="You may not edit the spawns!">
+        <rectangle name="red-spawn" min="-1303,-683" max="-1310,-694"/>
+        <rectangle name="blue-spawn" min="-1456,-694" max="-1449,-683"/>
+    </apply>
+    <!-- Wool rooms blue need to enter -->
+    <apply block="only-blue" message="You may not interact with this wool room!">
+        <region name="red-wools"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter your own wool room!">
+        <region name="red-wools"/>
+    </apply>
+    <!-- Wool rooms red need to enter -->
+    <apply block="only-red" message="You may not interact with this wool room!">
+        <region name="blue-wools"/>
+    </apply>
+    <apply enter="only-red" message="You may not enter your own wool room!">
+        <region name="blue-wools"/>
+    </apply>
+</regions>
+<maxbuildheight>35</maxbuildheight>
+<wools>
+    <wool team="blue" color="purple">
+        <block>-1462,9,-686</block>
+    </wool>
+    <wool team="blue" color="yellow">
+        <block>-1462,9,-692</block>
+    </wool>
+    <wool team="red" color="orange">
+        <block>-1298,9,-692</block>
+    </wool>
+    <wool team="red" color="magenta">
+        <block>-1298,9,-686</block>
+    </wool>
+</wools>
+<toolrepair>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
+    <tool>iron pickaxe</tool>
+</toolrepair>
+</map>
