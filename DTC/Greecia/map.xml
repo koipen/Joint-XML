@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<<<<<<< HEAD
 <map proto="1.3.3">
 <name>Greecia</name>
 <version>1.2.0</version>
@@ -14,23 +13,6 @@
     <core team="red" name="Core">
         <cuboid min="376,22,-653" max="378,26,-655"/>
     </core>
-=======
-<map proto="1.2.0">
-<name>Greecia</name> <!-- The map's name, shouldn't be too long -->
-<version>1.2.0</version> <!-- The map version -->
-<objective>Destroy the other team's core before they destroy yours!</objective>
- 
-<!-- Major map authors. -->
-<authors>
-    <author>CatchingMC</author> <!-- The creator of the map -->
- 
-<!-- Map modules, i.e. objectives, regions, spawns. -->
-<cores material="obsidian" leak="6">
-    <core team="blue"><cuboid min="330,22,-678" max="328,26,-671"/></core>
-</cores>
-<cores material="obsidian" leak="6">
-    <core team="red"><cuboid min="376,22,-653" max="378,26,-655"/></core>
->>>>>>> origin/master
 </cores>
 <teams>
    <team color="red" max="8" max-overfill="12">Red Team</team>
@@ -45,46 +27,28 @@
     <kit name="red" parents="spawn">
         <helmet color="cd0000">leather helmet</helmet>
         <chestplate>chain chestplate</chestplate>
-<<<<<<< HEAD
         <leggings color="cd0000">leather leggings</leggings>
-=======
-        <pants color="cd0000">leather pants</pants>
->>>>>>> origin/master
         <boots enchantment="protection fall:2">leather boots</boots>
     </kit>
     <kit name="blue" parents="spawn">
         <helmet color="0066cc">leather helmet</helmet>
         <chestplate>chain chestplate</chestplate>
-<<<<<<< HEAD
         <leggings color="006cc">leather leggings</leggings>
-=======
-        <pants color="006cc">leather pants</pants>
->>>>>>> origin/master
         <boots enchantment="protection fall:2">leather boots</boots>
     </kit>
 </kits>
 <toolrepair>
     <tool>iron sword</tool>
-<<<<<<< HEAD
-=======
-    <tool>bow</tool>
->>>>>>> origin/master
 </toolrepair>
 <itemkeep>
     <item>arrow</item>
     <item>spruce log</item>
-<<<<<<< HEAD
     <item damage="14">stained clay</item>
     <item damage="11">stained clay</item>
-=======
-    <item>red clay</item>
-    <item>blue clay</item>
->>>>>>> origin/master
 </itemkeep>
 <gamerules>
     <doDaylightCycle>false</doDaylightCycle>
 </gamerules>
-<<<<<<< HEAD
 <filters>
     <filter name="only-blue">
         <team>blue</team>
@@ -100,13 +64,6 @@
     <apply enter="only-red" message="You may not enter Red Team's base!">
         <rectangle name="red-base" min="400,-661" max="407,-651"/>
     </apply>
-=======
-<regions>
-    <rectangle name="blue-base" min="306,-665" max="299,-675"/>
-    <rectangle name="red-base" min="400,-661" max="407,-651s"/>
-    <apply enter="only-blue"><region name="blue-base"/>You may not enter Blue Team's base!</apply>
-    <apply enter="only-red"><region name="red-base"/>You may not enter Red Team's base!</apply>
->>>>>>> origin/master
 </regions>
 <spawns>
     <spawn team="red" kit="red" yaw="90">
@@ -119,8 +76,4 @@
         <cuboid min="352,38,-626" max="354,39,-624"/>
     </default>
 </spawns>
-<<<<<<< HEAD
- </map>
-=======
 </map>
->>>>>>> origin/master
