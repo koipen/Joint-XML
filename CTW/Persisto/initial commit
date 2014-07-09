@@ -1,0 +1,218 @@
+<map proto="1.3.3">
+	<name>Persisto</name>
+	<version>1.2.1</version>
+	<objective>Capture both wools to win.</objective>
+	<authors>
+		<author contribution="Aesthetics, XML and gameplay ideas.">Timothee38</author>
+		<author contribution="Mostly gameplay and frontlines aesthetics.">auxdempster</author>
+		<author contribution="Chest filling and spawn aesthetics.">re_cel</author>
+		<author contribution="Building and gameplay ideas.">Dracoheart2</author>
+	</authors>
+	<contributors>
+		<contributor contribution="Map fine tuning">Plastix</contributor>
+		<contributor contribution="Map Feedback and some XML">Captain_Elliott</contributor>
+	</contributors>
+	<wools team="red">
+		<wool color="yellow">
+			<block>15,11,146</block>
+		</wool>
+		<wool color="magenta">
+			<block>7,11,146</block>
+		</wool>
+	</wools>
+	<wools team="blue">
+		<wool color="orange">
+			<block>15,11,26</block>
+		</wool>
+		<wool color="lime">
+			<block>7,11,26</block>
+		</wool>
+	</wools>
+	<teams>
+		<team color="dark red" max="12" max-overfill="15">Red Team</team>
+		<team color="blue" max="12" max-overfill="15">Blue Team</team>
+	</teams>
+	<kits>
+		<kit name="spawn" force="true">
+			<item slot="0" damage="-3000">stone sword</item>
+			<item slot="1" damage="-3000">bow</item>
+			<item slot="2" damage="-3000" enchantment="durability:2">iron pickaxe</item>
+			<item slot="3" damage="-3000">stone axe</item>
+			<item slot="4" amount="32">cooked beef</item>
+			<item slot="5" amount="32">log</item>
+			<item slot="6" amount="32">glass</item>
+			<item slot="7">326</item>
+			<item slot="28" amount="64">arrow</item>
+			<potion duration="5" amplifier="1">heal</potion>
+		</kit>
+		<kit name="red" parents="spawn">
+			<chestplate color="cd0000">leather chestplate</chestplate>
+			<leggings>chainmail leggings</leggings>
+			<boots>chainmail boots</boots>
+		</kit>
+		<kit name="blue" parents="spawn">
+			<chestplate color="0066cc">leather chestplate</chestplate>
+			<leggings>chainmail leggings</leggings>
+			<boots>chainmail boots</boots>
+		</kit>
+		</kits>
+	<spawns>
+		<spawn team="red" kit="red" yaw="180">
+			<cuboid min="13,10,149" max="10,10,147"/>
+		</spawn>
+		<spawn team="blue" kit="blue" yaw="0">
+			<cuboid min="10,10,24" max="13,10,26"/>
+		</spawn>
+		<default yaw="0">
+			<cuboid min="13,38,85" max="10,38,88"/>
+		</default>
+	</spawns>
+	<filters>
+		<filter name="only-red" parents="deny-players">
+			<allow>
+				<team>red</team>
+			</allow>
+		</filter>
+			<filter name="only-blue" parents="deny-players">
+				<allow>
+					<team>blue</team>
+				</allow>
+		</filter>
+		<filter name="allow-some" parents="deny-all">
+			<allow>
+				<team>red</team>
+				<block>web</block>
+				<block>wool</block>
+				<block>step</block>
+				<block>wood stairs</block>
+				<block>thin glass</block>
+				<block>log</block>
+				<block>dead bush</block>
+				<block>fence</block>
+				<block>leaves</block>
+				<block>sandstone</block>
+				<block>grass</block>
+				<block>dirt</block>
+				<block>stone</block>
+				<block>wood</block>
+				<block>redstone block</block>
+				<block>torch</block>
+			</allow>
+				</filter>
+				<filter name="red-rooms">
+					<all>
+						<team>red</team>
+						<filter name="allow-some"/>
+					</all>
+				</filter>
+				<filter name="blue-rooms">
+			<all>
+				<team>blue</team>
+				<filter name="allow-some"/>
+			</all>
+		</filter>
+		<filter name="no-void">
+			<deny>
+				<void/>
+			</deny>
+		</filter>
+	</filters>
+	<!-- Complicated regions -->
+	<regions>
+		<apply enter="only-red">
+			<union name="blue-wr">
+				<rectangle min="-37,63" max="-50,38"/>
+				<rectangle min="60,38" max="73,63"/>
+			</union>
+			<union name="red-spawn">
+				<rectangle min="24,144" max="-1,153"/>
+			<!-- red spawn  -->
+			</union>
+		</apply>
+		<apply enter="only-blue">
+			<union name="red-wr">
+				<rectangle min="60,110" max="73,135"/>
+				<rectangle min="-37,110" max="-50,135"/>
+			</union>
+			<union name="blue-spawn">
+				<rectangle min="24,29" max="-1,20"/>
+				<!-- blue spawn  -->
+			</union>
+		</apply>
+		<apply block="allow-blocks">
+			<union name="block-placing-allowed">
+				<!-- blue wr -->
+				<rectangle min="-37,63" max="-50,38"/>
+				<rectangle min="60,38" max="73,63"/>
+				<!-- red wr -->
+				<rectangle min="60,110" max="73,135"/>
+				<rectangle min="-37,110" max="-50,135"/>
+			</union>
+		</apply>
+		<apply enter="only-blue">
+			<region name="red-wr"/>
+		</apply>
+		<apply enter="only-red">
+			<region name="blue-wr"/>
+		</apply>
+		<apply block="deny-blocks">
+			<negative>
+				<region name="block-placing-allowed"/>
+			</negative>
+			<union name="no-block-place in spawns">
+				<region name="blue-spawn"/>
+				<region name="red-spawn"/>
+			</union>
+		</apply>
+		<apply block="red-rooms">
+			<region name="blue-wr"/>
+		</apply>
+		<apply block="blue-rooms">
+			<region name="red-wr"/>
+		</apply>
+		<apply block="no-void">
+			<negative>
+				<cuboid min="oo,oo,oo" max="-oo,-oo,-oo"/>
+			</negative>
+		</apply>
+	</regions>
+	<renewables>
+		<renewable rate="2" grow="true" particles="false" sound="false" avoid-entities="true">
+			<region>
+				<!--Blue Right Iron-->
+				<cuboid min="8,5,40"  max="0,11,46"/>
+				<!--Blue Left Iron-->
+				<cuboid  min="23,5,40" max="13,11,46"/>
+				<!--Red Right Iron-->
+				<cuboid min="23,11,127" max="14,5,133"/>
+				<!--Red Left Iron-->
+				<cuboid min="9,5,133" max="0,11,127"/>
+			</region>
+			<renew>iron block</renew>
+			<replace>air</replace>
+		</renewable>
+	</renewables>	
+	<maxbuildheight>30</maxbuildheight>
+	<toolrepair>
+		<tool>stone sword</tool>
+		<tool>bow</tool>
+	</toolrepair>
+	<itemremove>
+		<item>arrow</item>
+		<item>cooked beef</item>
+		<item>leather chestplate</item>
+		<item>iron chestplate</item>
+		<item>chainmail leggings</item>
+		<item>chainmail boots</item>
+		<item>stone sword</item>
+		<item>iron pickaxe</item>
+		<item>wood</item>
+		<item>log</item>
+		<item>glass</item>
+		<item>redstone block</item>
+		<item>sapling</item>
+		<item>apple</item>
+		<item>lapis block</item>
+	</itemremove>
+	<timelock>on</timelock>
+</map>
