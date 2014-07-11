@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Isle</name>
+<version>1.0.0</version>
+<objective>Destroy the enemy team's core.</objective>
+<authors>
+    <author>Theta_</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">Timothee38</contributor>
+</contributors>
+<kits>
+    <kit name="spawn" force="true">
+        <item slot="0" damage="-3000">iron sword</item>
+        <item slot="1" damage="-3000">bow</item>
+        <item slot="2" enchantement="dig speed:2;durability:3" damage="-3000">iron pickaxe</item>
+        <item slot="3" enchantement="dig speed:2;durability:3" damage="-3000">iron axe</item>
+        <item slot="4" amount="64">pumpkin pie</item>
+        <item slot="5" amount="2">golden apple</item>
+        <item slot="7" amount="64">log</item>
+        <item slot="8" amount="64" damage="0">stained glass</item>
+        <item slot="34" amount="64">arrow</item>
+        <item slot="35" amount="64">arrow</item>
+        <potion duration="5" amplifier="1">heal</potion>
+    </kit>
+</kits>
+<teams>
+   <team color="magenta" max="10" max-overfill="12">Magenta Team</team>
+   <team color="light blue" max="10" max-overfill="12">Blue Team</team>
+</teams>
+<spawns>
+    <spawn team="magenta" kit="spawn" yaw="-90">
+        <cuboid min="222,39,785" max="223,39,784"/>
+    </spawn>
+    <spawn team="blue" kit="spawn" yaw="90">
+        <cuboid min="207,39,602" max="206,39,603"/>
+    </spawn>
+    <default yaw="-90">
+        <cuboid min="283,87,692" max="281,87,694"/>
+    </default>
+</spawns>
+<cores material="obsidian" leak="5">
+    <core team="blue">
+	    <cuboid min="208,49,645" max="216,57,653"/>
+    </core>
+    <core team="magenta">
+	    <cuboid min="221,49,742" max="214,58,735"/>
+    </core>
+</cores>
+<filters>
+    <filter name="deny-spawner-break" parents="deny-blocks">
+	    <block>mob spawner</block>
+    </filter>
+<filters>
+<regions>
+    <rectangle name="total-region" min="-oo,-oo" max="oo,oo"/>
+    <apply block="deny-spawner-break">
+        <region name="total-region"/>	
+    </apply>
+    <rectangle name="spawn1" min="205,604" max="208,601" />
+    <rectangle name="spawn2" min="224,783" max="221,786" />
+    <apply block="deny-all">
+	    <region name="spawn1" />
+	    <region name="spawn2" />
+    </apply>
+</regions>
+<itemremove>
+    <item>log</item>
+    <item>stained glass</item>
+    <item>obsidian</item>
+    <item damage="1">sapling</item>
+    <item>pumpkin pie</item>
+    <item>bow</item>
+    <item>iron sword</item>
+    <item>iron axe</item>
+    <item>iron pickaxe</item>
+</itemremove>
+<toolrepair>
+    <item>bow</item>
+    <item>iron sword</item>
+    <item>iron axe</item>
+    <item>iron pickaxe</item>
+</toolrepair>
+<maxbuildheight>64</maxbuildheight>
+</map>
