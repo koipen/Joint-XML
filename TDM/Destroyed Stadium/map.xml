@@ -30,7 +30,7 @@
         <item slot="1" enchantment="arrow infinite:1" damage="-3000">bow</item>
         <item slot="2" amount="16">snow ball</item>
         <item slot="3" amount="16">golden carrot</item>
-        <item slot="4">golden apple</item>
+        <item slot="4">cooked beef</item>
         <item slot="28">arrow</item>
         <chestplate damage="-3000" enchantment="protection projectile:2">chainmail chestplate</chestplate>
         <boots damage="-3000">gold boots</boots>
@@ -67,19 +67,19 @@
     </filter>
 </filters>
 <regions>
-	<cuboid name="green-score" max="-574,6,500" min="-568,0,498"/>
+    <cuboid name="green-score" max="-574,6,500" min="-568,0,498"/>
     <cuboid name="orange-score" max="-574,0,586" min="-567,6,584"/>
-	<cuboid name="scorebox-green" max="-574.5,7,586.5" min="-566.5,4,583.5"/>
-	<cuboid name="scorebox-orange" max="-566.5,7,497.5" min="-574.5,4,500.5"/>
+    <cuboid name="scorebox-green" max="-574.5,7,586.5" min="-566.5,4,583.5"/>
+    <cuboid name="scorebox-orange" max="-566.5,7,497.5" min="-574.5,4,500.5"/>
     <apply block="deny-all">
         <rectangle min="-oo,-oo" max="oo,oo"/>
     </apply>
-	<apply enter="only-orange" message="You may not enter your own scorebox.">
-		<region name="scorebox-green"/>
-	</apply>
-	<apply enter="only-green" message="You may not enter your own scorebox.">
-		<region name="scorebox-orange"/>
-	</apply>
+    <apply enter="only-orange" message="You may not enter your own scorebox.">
+        <region name="scorebox-green"/>
+    </apply>
+    <apply enter="only-green" message="You may not enter your own scorebox.">
+        <region name="scorebox-orange"/>
+    </apply>
 </regions>
 <score>
     <time>10m</time>
@@ -98,11 +98,11 @@
     <portal x="@-543" z="@494" yaw="@45" filter="only-orange">
         <region name="orange-score"/>
     </portal>
-	<portal x="@-570" y="@8" z="@493" yaw="@0">
-		<cuboid min="-575,6,499" max="-566,9,497"/>
-	</portal>
-	<portal x="@-570" y="@8" z="@589" yaw="@-180">
-		<cuboid min="-566,6,584" max="-575,9,586"/>
-	</portal>
+    <portal x="@-570" y="@8" z="@493" yaw="@0">
+        <cuboid min="-575,6,499" max="-566,9,497"/>
+    </portal>
+    <portal x="@-570" y="@8" z="@589" yaw="@-180">
+        <cuboid min="-566,6,584" max="-575,9,586"/>
+    </portal>
 </portals>
 </map>
