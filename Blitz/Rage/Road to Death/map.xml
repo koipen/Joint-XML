@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Road to Death</name>
+<version>1.0.0</version>
+<objective>Kill the enemy team after time is up!</objective>
+<authors>
+    <author contribution="Main idea, building decoration and XML.">felipu_feliu</author>
+</authors>
+<contributors>
+    <contributor contribution="Building and decoration">axelvera98</contributor>
+</contributors>
+<rules>
+    <rule>Hiding is not allowed!</rule>
+</rules>
+<rage/>
+<teams>
+   <team color="Blue" max="12" max-overfill="15">Blue Team</team>
+   <team color="Green" max="12" max-overfill="15">Green Team</team>
+</teams>
+<kits>
+    <kit name="spawn" force="true">
+        <item slot="0" enchantment="damage all:10">diamond sword</item>
+        <item slot="1" enchantment="arrow damage:10">bow</item>
+        <item slot="2" amount="8">cooked beef</item>
+        <item slot="27" amount="1">arrow</item>
+        <potion duration="5" amplifier="1">heal</potion>
+        <chestplate locked="true">iron chestplate</chestplate>
+    </kit>
+    <kit name="Green" parents="spawn">
+        <helmet locked="true" color="667F33">leather helmet</helmet>
+        <leggings locked="true" color="667F33">leather leggings</leggings>
+        <boots locked="true" color="667F33" enchantment="protection fall:1">leather boots</boots>
+    </kit>
+    <kit name="Blue" parents="spawn">
+        <helmet locked="true" color="334CB2">leather helmet</helmet>
+        <leggings locked="true" color="334CB2">leather leggings</leggings>
+        <boots locked="true" color="334CB2" enchantment="protection fall:1">leather boots</boots>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="Green" kit="Green" yaw="0">
+        <cuboid min="106,6,102" max="107,7,103"/>
+    </spawn>
+    <spawn team="Blue" kit="Blue" yaw="0">
+        <cuboid min="112,6,181" max="112,7,181"/>
+    </spawn>
+    <default yaw="0">
+        <cuboid min="108,47,142" max="108,48,142"/>
+    </default>
+</spawns>
+<itemremove>
+    <item>leather helment</item>
+    <item>iron cheplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>diamond sword</item>
+    <item>bow</item>
+    <item>cooked beef</item>
+</itemremove>
+<blitz>
+    <time>5m</time>
+    <lives>1</lives>
+    <broadcastLives>false</broadcastLives>
+    <title>Rage</title>
+</blitz>
+<killreward>
+    <item amount="1">arrow</item>
+</killreward>
+<include src="blitz-global.xml"/>
+</map>
