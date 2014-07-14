@@ -37,6 +37,11 @@
         <boots locked="true" color="334CB2" enchantment="protection fall:1">leather boots</boots>
     </kit>
 </kits>
+<regions>
+    <apply block="deny-all">
+        <rectangle name="playable" min="-oo,-oo" max="oo,oo"/>
+    </apply>
+</regions>
 <spawns>
     <spawn team="Green" kit="Green" yaw="0">
         <cuboid min="106,6,102" max="107,7,103"/>
