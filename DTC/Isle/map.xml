@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
 <name>Isle</name>
-<version>1.0.0</version>
+<version>1.2</version>
 <objective>Destroy the enemy team's core.</objective>
 <authors>
     <author>Theta_</author>
@@ -17,8 +17,10 @@
         <item slot="3" enchantement="dig speed:2;durability:3" damage="-3000">iron axe</item>
         <item slot="4" amount="64">pumpkin pie</item>
         <item slot="5" amount="2">golden apple</item>
+        <item slot="6" amount="64">vines</item>
         <item slot="7" amount="64">log</item>
         <item slot="8" amount="64" damage="0">stained glass</item>
+        <item slot="25" amount="1">boat</item>
         <item slot="34" amount="64">arrow</item>
         <item slot="35" amount="64">arrow</item>
         <potion duration="5" amplifier="1">heal</potion>
