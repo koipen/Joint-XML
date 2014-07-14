@@ -128,7 +128,7 @@
     </apply>
 </regions>
 <killreward>
-    <item amount="4">redstone</item>
+    <item amount="5">redstone</item>
 </killreward>
 <itemremove>
     <item>leather helmet</item>
