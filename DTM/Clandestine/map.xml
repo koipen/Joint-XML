@@ -68,7 +68,7 @@
         <item slot="7" amount="1">golden apple</item>
         <leggings>chainmail leggings</leggings>
         <potion duration="2" amplifier="2">heal</potion>
-        <potion duration="5">damage resistance</potion>
+        <potion duration="3">damage resistance</potion>
     </kit>
     <kit name="green" parents="spawn">
         <helmet color="305721">leather helmet</helmet>
