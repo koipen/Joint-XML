@@ -4,10 +4,11 @@
 <version>1.0.0</version>
 <objective>Kill the enemy team after time is up!</objective>
 <authors>
-    <author contribution="Main idea, building decoration and XML.">felipu_feliu</author>
+    <author contribution="Main idea, building and decoration">felipu_feliu</author>
 </authors>
 <contributors>
     <contributor contribution="Building and decoration">axelvera98</contributor>
+    <contributor contribution="Xml">lord_creeper01</contributor>
 </contributors>
 <rules>
     <rule>Hiding is not allowed!</rule>
