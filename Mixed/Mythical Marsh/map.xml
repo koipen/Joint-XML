@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+  <name>Mythical Marsh</name>
+  <version>1.0</version>
+  <objective>Capture both wools of enemies' team and destroy there monument.</objective>
+  <authors>
+    <author>rockymine</author>
+    <author contribution="Caves, ideas, Etc">LieutenantPants</author>
+  </authors>
+  <contributors>
+    <contributor contribution="Wool Room Designer">Guicotsch</contributor>
+    <contributor contribution="Tree Designer0">DoomRobotBoy</contributor>
+    <contributor contribution="XML">Captain_Elliott</contributor>
+  </contributors>
+  <teams>
+    <team color="red" max="30" max-overfill="40" overhead-color="c">Red Team</team>
+    <team color="blue" max="30" max-overfill="40" overhead-color="9">Blue Team</team>
+  </teams>
+  <kits>
+    <kit name="spawn" force="true">
+      <item slot="0">stone sword</item>
+      <item slot="1">bow</item>
+      <item slot="2">stone pickaxe</item>
+      <item slot="3" enchantment="DIG_SPEED:1;DURABILITY:2">iron axe</item>
+      <item slot="4">iron spade</item>
+      <item slot="5" amount="32">apple</item>
+      <item slot="6">golden apple</item>
+      <item slot="7" damage="1">log 2</item>
+      <item slot="8">buket</item>
+      <item slot="9" amount="64" damage="1">leaves 2</item>
+      <helmet>leather helmet</helmet>
+      <chestplate enchantment="protection environmental">chainmail chestplate</chestplate>
+    </kit>
+  </kits>
+  <spawns>
+    <spawn team="blue" kit="spawn" safe="true" yaw="180">
+      <cuboid min="-2,20,150" max="3,20,146"/>
+    </spawn>
+    <spawn team="red" kit="spawn" safe="true" yaw="0">
+      <cuboid min="3,20,-149" max="2,20,-145"/>
+    </spawn>
+    <default yaw="-90">
+      <block>-37,11,0</block>
+    </default>
+  </spawns>
+  <wools>
+    <wools team="red">
+        <wool color="lime">
+          <block>0,24,-165</block>
+        </wool>
+        <wool color="green">
+          <block>0,25,-165</block>
+        </wool>
+    </wools>
+    <wools team="blue">
+      <wool color="pink">
+        <block>0,24,165<wool>
+      </wool>
+      <wool color="purple">
+        <block>0,25,165</block>
+      </wool>
+    </wools>
+  </wools>
+  <destroyables name="Monument" materials="ermerald block" completion="100%">
+    <destroyables owner="blue">
+      <cuboid min="-2,18,89" max="3,25,84"/>
+    </destroyables>
+    <destroyables owner="red">
+      <cuboid min="-2,18,-88" max="-3,25,-82"/>
+    </destroyables>
+  </destroyables>
+  <filters>
+    <filter name="wool-mon">
+      <any>
+        <block>lime wool</block>
+        <block>green wool</block>
+        <block>pink wool</block>
+        <block>purple wool</block>
+      </any>
+    </filter>
+    <filter name="only-red">
+      <team>red</team>
+    </filter>
+    <filter name="only-blue">
+      <team>blue</team>
+    </filter>
+  </filters>
+  <regions>
+    <cuboid name="red-spawn" min="4,20,151" max="3,27,137"/>
+    <cuboid name="blue-spawn" min="-3,20,-150" max="4,27,-136"/>
+    <rectangle name="main-area" min="25,-213" max="-24,214"/>
+    <apply block="wool-mon" message="you may not edit the victory monument!">
+      <cuboid min="-0,24,-164" max="2,27,-165"/>
+      <cuboid min="2,24,165" max="-1,27,166"/>
+    </apply>
+    <apply enter="only-red" message="you may not enter the enemy spawn area!">
+      <region name="red-spawn"/>
+    </apply>
+    <apply enter="only-blue" message="you may not enter the enemy spawn area!">
+      <region name="blue-spawn"/>
+    </apply>
+    <apply block="deny-all" message="you may not edit the spawn areas!">
+      <region name="blue-spawn"/>
+      <region name="red-spawn"/>
+    </apply>
+    <apply block="deny-all" message="you may not leave the playing field!">
+      <negative>
+        <region name="main-area"/>
+      </negative>
+    </apply>
+  </regions>
+</map>
