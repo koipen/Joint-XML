@@ -9,7 +9,7 @@
   </authors>
   <contributors>
     <contributor contribution="Wool Room Designer">Guicotsch</contributor>
-    <contributor contribution="Tree Designer0">DoomRobotBoy</contributor>
+    <contributor contribution="Designer">DoomRobotBoy</contributor>
     <contributor contribution="XML">Captain_Elliott</contributor>
   </contributors>
   <teams>
@@ -26,7 +26,7 @@
       <item slot="5" amount="32">apple</item>
       <item slot="6">golden apple</item>
       <item slot="7" damage="1">log 2</item>
-      <item slot="8">buket</item>
+      <item slot="8">bucket</item>
       <item slot="9" amount="64" damage="1">leaves 2</item>
       <helmet>leather helmet</helmet>
       <chestplate enchantment="protection environmental">chainmail chestplate</chestplate>
@@ -61,7 +61,7 @@
       </wool>
     </wools>
   </wools>
-  <destroyables name="Monument" materials="ermerald block" completion="100%">
+  <destroyables name="Monument" materials="emerald block" completion="100%">
     <destroyables owner="blue">
       <cuboid min="-2,18,89" max="3,25,84"/>
     </destroyables>
@@ -109,4 +109,7 @@
       </negative>
     </apply>
   </regions>
+  <killrewards>
+    <item>iron</item>
+  </killrewards>
 </map>
