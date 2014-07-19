@@ -163,4 +163,5 @@
   <killreward>
     <item>iron</item>
   </killreward>
+  <maxbuildheight>45</maxbuildheight>
 </map>
