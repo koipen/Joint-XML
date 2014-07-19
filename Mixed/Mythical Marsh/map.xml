@@ -160,4 +160,7 @@
     <item>golden apple</item>
     <item enchantment="damage all:2">iron sword</item>
   </killreward>
+  <killreward>
+    <item>iron</item>
+  </killreward>
 </map>
