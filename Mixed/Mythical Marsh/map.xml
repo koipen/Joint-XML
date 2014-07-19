@@ -28,8 +28,9 @@
       <item slot="7" damage="1">log 2</item>
       <item slot="8">bucket</item>
       <item slot="9" amount="64" damage="1">leaves 2</item>
+      <item slot="28" amount="64">arrow</item>
       <helmet>leather helmet</helmet>
-      <chestplate enchantment="protection environmental">chainmail chestplate</chestplate>
+      <chestplate enchantment="protection environmental">leather chestplate</chestplate>
     </kit>
   </kits>
   <spawns>
@@ -84,6 +85,11 @@
     <filter name="only-blue">
       <team>blue</team>
     </filter>
+    <filter name="no-spawner">
+      <not>
+        <block>spawner</block>
+      </not>
+    </filter>
   </filters>
   <regions>
     <cuboid name="red-spawn" min="4,20,151" max="3,27,137"/>
@@ -108,8 +114,50 @@
         <region name="main-area"/>
       </negative>
     </apply>
+    <apply block="no-spawner">
+      <region name="main-area"/>
+    </apply>
   </regions>
-  <killrewards>
-    <item>iron</item>
-  </killrewards>
+  <killreward>
+    <filter>
+      <kill-streak count="2"/>
+    </filter>
+    <item enchantment="dig speed:1">iron pickaxe</item>
+    <item>golden apple</item>
+  </killreward>
+  <killreward>
+    <filter>
+      <kill-streak count="4"/>
+    </filter>
+    <item>golden apple</item>
+    <item>diamond pickaxe</item>
+  </killreward>
+  <killreward>
+    <filter>
+      <kill-streak count="6"/>
+    </filter>
+    <item>golden apple</item>
+    <item enchantment="protection environmental">chainmail leggings</item>
+  </killreward>
+  <killreward>
+    <filter>
+      <kill-streak count="8"/>
+    </filter>
+    <item>golden apple</item>
+    <item>iron leggings</item>
+  </killreward>
+  <killreward>
+    <filter>
+      <kill-streak count="10"/>
+    </filter>
+    <item>golden apple</item>
+    <item enchantment="protection environmental:2">chainmail chestplate</item>
+  </killreward>
+  <killreward>
+    <filter>
+      <kill-streak count="12"/>
+    </filter>
+    <item>golden apple</item>
+    <item enchantment="damage all:2">iron sword</item>
+  </killreward>
 </map>
