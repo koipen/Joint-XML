@@ -1,72 +1,72 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
-  <name>Pueblo</name>
-  <version>1.0.0</version>
-  <objective>Capture the two enemy wools and the centre wool and place them on your victory monument</objective>
-  <authors>
+<name>Pueblo</name>
+<version>1.0.0</version>
+<objective>Capture the two enemy wools and the centre wool and place them on your victory monument</objective>
+<authors>
     <author>CHShadow</author>
-  </authors>
-  <contributors>
-    <contributor contribution="Map feedback and building">fhbob<contributor>
-  </contributors>
-  <rules>
+</authors>
+<contributors>
+    <contributor contribution="Map feedback and building">fhbob</contributor>
+</contributors>
+<rules>
     <rule>Don't glitch back into the spawn island.</rule>
-  </rules>
-  <teams>
+</rules>
+<teams>
     <team color="dark_green" max="16">Green</team>
     <team color="gold" max="16">Yellow</team>
-  </teams>
-  <spawns>
+</teams>
+<spawns>
     <spawn team="green" kit="green">
-      <point yaw="-90">"-144.5,5,0.5"</point>
-      <point yaw="-90">"-144.5,5,-5.5"</point>
-      <point yaw="-90">"-144.5,5,6.5"</point>
+        <point yaw="-90">"-144.5,5,0.5"</point>
+        <point yaw="-90">"-144.5,5,-5.5"</point>
+        <point yaw="-90">"-144.5,5,6.5"</point>
     </spawn>
     <spawn team="yellow" kit="Yellow">
-      <point yaw="90">"145.5,5,0.5"</point>
-      <point yaw="90">"145.5,5,-5.5"</point>
-      <point yaw="90">"145.5,5,6.5"</point>
+        <point yaw="90">"145.5,5,0.5"</point>
+        <point yaw="90">"145.5,5,-5.5"</point>
+        <point yaw="90">"145.5,5,6.5"</point>
     </spawn>
     <default>
-      <point yaw="0">"0.5,38,0.5"</point>
+        <point yaw="0">"0.5,38,0.5"</point>
     </default>
-  </spawns>
-  <kits>
+</spawns>
+<kits>
     <kit name="teams">
-      <item slot="0">iron sword</item>
-      <item slot="1" enchantment="arrow damage:1">bow</item>
-      <item slot="2">diamond pickaxe</item>
-      <item slot="3">iron axe</item>
-      <item slot="4" amount="64">gold ingot</item>
-      <item slot="5" amount="32">sandstone</item>
-      <item slot="6" amount="64" damage="1">wood</item>
-      <item slot="7" amount="2">golden apple</item>
-      <item slot="8" amount="64">golden carrot</item>
-      <item slot="9" amount="32">arrow</item>
-      <potion duration="5" amplifier="4">heal</potion>
-      <potion duration="5" amplifier="4">damage resistance</potion>
-      <potion duration="5" amplifier="2">increase damage</potion>
+        <item slot="0">iron sword</item>
+        <item slot="1" enchantment="arrow damage:1">bow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3">iron axe</item>
+        <item slot="4" amount="64">gold ingot</item>
+        <item slot="5" amount="32">sandstone</item>
+        <item slot="6" amount="64" damage="1">wood</item>
+        <item slot="7" amount="2">golden apple</item>
+        <item slot="8" amount="64">golden carrot</item>
+        <item slot="9" amount="32">arrow</item>
+        <potion duration="5" amplifier="4">heal</potion>
+        <potion duration="5" amplifier="4">damage resistance</potion>
+        <potion duration="5" amplifier="2">increase damage</potion>
     </kit>
     <kit name="Green" parents="teams">
-      <helmet color="7FCC19" damage="-3000">leather helmet</helmet>
-      <chestplate color="E5E533" damage="-3000">leather chesplate</chestplate>
-      <leggings damage="-3000">chainmail leggings</leggings>
-      <boots color="d87f33" damage="-3000">leather boots</boots>
+        <helmet color="7FCC19" damage="-3000">leather helmet</helmet>
+        <chestplate color="E5E533" damage="-3000">leather chesplate</chestplate>
+        <leggings damage="-3000">chainmail leggings</leggings>
+        <boots color="d87f33" damage="-3000">leather boots</boots>
     </kit>
     <kit name="Yellow" parents="teams">
-      <helmet color="E5E533" damage="-3000">leather helmet</helmet>
-      <chestplate color="E5E533" damage="-3000">leather chestplate</chestplate>
-      <leggings damage="-3000">chainmail leggings</leggings>
-      <boots color="E5E533" damage="-3000">leather boots</boots>
+        <helmet color="E5E533" damage="-3000">leather helmet</helmet>
+        <chestplate color="E5E533" damage="-3000">leather chestplate</chestplate>
+        <leggings damage="-3000">chainmail leggings</leggings>
+        <boots color="E5E533" damage="-3000">leather boots</boots>
     </kit>
     <kit name="rage" force="true">
-      <potion duration="oo" amplifier="100">increase damage</potion>
+        <potion duration="oo" amplifier="100">increase damage</potion>
     </kit>
     <kit name="outside-rage" force="true">
-      <potion duration="1" amplifier="101">increase damage</potion>
+        <potion duration="1" amplifier="101">increase damage</potion>
     </kit>
-  </kits>
-  <itemremove>
+</kits>
+<itemremove>
     <item>log</item>
     <item>glass</item>
     <item>golden carrot</item>
@@ -79,129 +79,128 @@
     <item>sand</item>
     <item>string</item>
     <item>glowstone dust</item>
-  <item>sapling</item>
-  </itemremove>
-  <toolrepair>
+    <item>sapling</item>
+</itemremove>
+<toolrepair>
     <tool>iron sword</tool>
     <tool>diamond pickaxe</tool>
     <tool>bow</tool>
     <tool>stone spade</tool>
-  <tool>iron axe</tool>
-  </toolrepair>
-  <killreward>
+    <tool>iron axe</tool>
+</toolrepair>
+<killreward>
     <item>golden apple</item>
     <item amount="16">arrow</item>
-  </killreward>
-  <timelock>on</timelock>
-  <maxbuildheight>30</maxbuildheight>
-  <regions>
-    <cuboid name="playable" min="-154,-oo,-67" max="155,oo,68">
+</killreward>
+<timelock>on</timelock>
+<maxbuildheight>30</maxbuildheight>
+<regions>
+    <cuboid name="playable" min="-154,-oo,-67" max="155,oo,68"/>
     <!--green team must get these wools-->
     <union name="green-woolrooms">
-      <cuboid name="green-wool-room-b" min="89,-oo,-44" max="110,oo,-67"/>
-      <cuboid name="lime-wool-room-b" min="88,-oo,45" max="110,oo,68"/>
+        <cuboid name="green-wool-room-b" min="89,-oo,-44" max="110,oo,-67"/>
+        <cuboid name="lime-wool-room-b" min="88,-oo,45" max="110,oo,68"/>
     </union>
     <!--yellow team must get these wools-->
     <union name="yellow-woolrooms">
-      <cuboid name="orange-wool-room-b" min="-88,-oo,45" max="-109,oo,68"/>
-      <cuboid name="yellow-wool-room-b" min="-87,-oo,-44" max="-109,oo,-67"/>
+        <cuboid name="orange-wool-room-b" min="-88,-oo,45" max="-109,oo,68"/>
+        <cuboid name="yellow-wool-room-b" min="-87,-oo,-44" max="-109,oo,-67"/>
     </union>
     <!--centre island with "rage" effect and magenta wool-->
     <union name="rage-area">
-      <cuboid min="-1,-oo,23" max="2,oo,-22"/>
-      <cuboid min="-2,-oo,22" max="3,oo,-20"/>
-      <cuboid min="-19,-oo,2" max="20,oo,-1"/>
-      <cuboid min="-18,-oo,-3" max="19,oo,4"/>
-      <cuboid min="-16,-oo,-4" max="17,oo,5"/>
-      <cuboid min="-14,-oo,-5" max="15,oo,6"/>
-      <cuboid min="-12,-oo,-6" max="13,oo,7"/>
-      <cuboid min="-6,-oo,-7" max="7,oo,8"/>
-      <cuboid min="-3,-oo,-8" max="4,oo,9"/>
+        <cuboid min="-1,-oo,23" max="2,oo,-22"/>
+        <cuboid min="-2,-oo,22" max="3,oo,-20"/>
+        <cuboid min="-19,-oo,2" max="20,oo,-1"/>
+        <cuboid min="-18,-oo,-3" max="19,oo,4"/>
+        <cuboid min="-16,-oo,-4" max="17,oo,5"/>
+        <cuboid min="-14,-oo,-5" max="15,oo,6"/>
+        <cuboid min="-12,-oo,-6" max="13,oo,7"/>
+        <cuboid min="-6,-oo,-7" max="7,oo,8"/>
+        <cuboid min="-3,-oo,-8" max="4,oo,9"/>
     </union>
     <cuboid name="green-spawn" min="-137,-oo,-13" max="-151,oo,14"/>
     <cuboid name="yellow-spawn" min="138,-oo,14" max="152,oo,-13"/>
-    <region name="green-victory">
-    <cuboid min="-93,oo,-3" max="-81,-oo,4"/>
-    <cuboid name="yellow-victory" min="82,-oo,-3" max="94,OO,4"/>
+    <cuboid name="green-victory" min="-93,oo,-3" max="-81,-oo,4"/>
+    <cuboid name="yellow-victory" min="82,-oo,-3" max="94,oo,4"/>
     <union name="stairs">
-      <cuboid name="g-stairs" min="-86,-oo,-5" max="-63,oo,6">
-      <cuboid name="y-stairs" min="87,-oo,6" max="64,oo,-5">
+        <cuboid name="g-stairs" min="-86,-oo,-5" max="-63,oo,6"/>
+        <cuboid name="y-stairs" min="87,-oo,6" max="64,oo,-5"/>
     </union>
     <union name="outside-rage">
-      <cuboid min="-18,-oo,-3" max="-16,oo,-4"/>
-      <cuboid min="-16,-oo,-4" max="-14,oo,-5"/>
-      <cuboid min="-14,-oo,-5" max="-12,oo,-6"/>
-      <cuboid min="-12,-oo,6" max="-6,oo,-7"/>
-      <cuboid min="-6,-oo,-7" max="-3,oo,-8"/>
-      <cuboid min="-3,-oo,-8" max="-2,oo,-21"/>
-      <cuboid min="-2,-oo,-21" max="-1,oo,-22"/>
-      <cuboid min="-1,-oo,-22" max="2,oo,-23"/>
-      <cuboid min="2,-oo,-22" max="3,oo,-21"/>
-      <cuboid min="3,-oo,-21" max="4,oo,-8"/>
-      <cuboid min="4,-oo,-8" max="7,oo,-7"/>
-      <cuboid min="7,-oo,-7" max="13,oo,-6"/>
-      <cuboid min="13,-oo,-6" max="15,oo,-5"/>
-      <cuboid min="15,-oo,-5" max="17,oo,-4"/>
-      <cuboid min="17,-oo,-4" max="19,oo,-3"/>
-      <cuboid min="19,-oo,-3" max="20,oo,-1"/>
-      <cuboid min="20,-oo,-1" max="21,oo,2"/>
-      <cuboid min="19,-oo,2" max="20,oo,4"/>
-      <cuboid min="18,-oo,4" max="17,oo,5"/>
-      <cuboid min="17,-oo,5" max="15,oo,6"/>
-      <cuboid min="15,-oo,6" max="13,oo,7"/>
-      <cuboid min="13,-oo,7" max="7,oo,8"/>
-      <cuboid min="7,-oo,8" max="4,oo,9"/>
-      <cuboid min="4,-oo,9" max="3,oo,22"/>
-      <cuboid min="3,-oo,22" max="2,oo,23"/>
-      <cuboid min="2,-oo,23" max="-1,oo,23"/>
-      <cuboid min="-1,-oo,23" max="-2,oo,22"/>
-      <cuboid min="-2,-oo,22" max="-3,oo,9"/>
-      <cuboid min="-3,-oo,9" max="-6,oo,8"/>
-      <cuboid min="-6,-oo,8" max="-12,oo,7"/>
-      <cuboid min="-12,-oo,7" max="-14,oo,6"/>
-      <cuboid min="14,-oo,6" max="-16,oo,5"/>
-      <cuboid min="-16,-oo,5" max="-18,oo,4"/>
-      <cuboid min="-18,-oo,4" max="-19,oo,2"/>
-      <cuboid min="-19,-oo,2" max="-2O,oo,-1"/>
-      <cuboid min="-19,-oo,-1" max="-18,oo,-3"/>
+        <cuboid min="-18,-oo,-3" max="-16,oo,-4"/>
+        <cuboid min="-16,-oo,-4" max="-14,oo,-5"/>
+        <cuboid min="-14,-oo,-5" max="-12,oo,-6"/>
+        <cuboid min="-12,-oo,6" max="-6,oo,-7"/>
+        <cuboid min="-6,-oo,-7" max="-3,oo,-8"/>
+        <cuboid min="-3,-oo,-8" max="-2,oo,-21"/>
+        <cuboid min="-2,-oo,-21" max="-1,oo,-22"/>
+        <cuboid min="-1,-oo,-22" max="2,oo,-23"/>
+        <cuboid min="2,-oo,-22" max="3,oo,-21"/>
+        <cuboid min="3,-oo,-21" max="4,oo,-8"/>
+        <cuboid min="4,-oo,-8" max="7,oo,-7"/>
+        <cuboid min="7,-oo,-7" max="13,oo,-6"/>
+        <cuboid min="13,-oo,-6" max="15,oo,-5"/>
+        <cuboid min="15,-oo,-5" max="17,oo,-4"/>
+        <cuboid min="17,-oo,-4" max="19,oo,-3"/>
+        <cuboid min="19,-oo,-3" max="20,oo,-1"/>
+        <cuboid min="20,-oo,-1" max="21,oo,2"/>
+        <cuboid min="19,-oo,2" max="20,oo,4"/>
+        <cuboid min="18,-oo,4" max="17,oo,5"/>
+        <cuboid min="17,-oo,5" max="15,oo,6"/>
+        <cuboid min="15,-oo,6" max="13,oo,7"/>
+        <cuboid min="13,-oo,7" max="7,oo,8"/>
+        <cuboid min="7,-oo,8" max="4,oo,9"/>
+        <cuboid min="4,-oo,9" max="3,oo,22"/>
+        <cuboid min="3,-oo,22" max="2,oo,23"/>
+        <cuboid min="2,-oo,23" max="-1,oo,23"/>
+        <cuboid min="-1,-oo,23" max="-2,oo,22"/>
+        <cuboid min="-2,-oo,22" max="-3,oo,9"/>
+        <cuboid min="-3,-oo,9" max="-6,oo,8"/>
+        <cuboid min="-6,-oo,8" max="-12,oo,7"/>
+        <cuboid min="-12,-oo,7" max="-14,oo,6"/>
+        <cuboid min="14,-oo,6" max="-16,oo,5"/>
+        <cuboid min="-16,-oo,5" max="-18,oo,4"/>
+        <cuboid min="-18,-oo,4" max="-19,oo,2"/>
+        <cuboid min="-19,-oo,2" max="-2O,oo,-1"/>
+        <cuboid min="-19,-oo,-1" max="-18,oo,-3"/>
     </union>
     <apply block="only-green" use="only-green-usage">
-      <region name="green-woolrooms"/>
+        <region name="green-woolrooms"/>
     </apply>
     <apply enter="only-green" message="'7This is a '2GREEN TEAM '7only wool room!">
-      <region name="green-woolrooms"/>
+        <region name="green-woolrooms"/>
     </apply>
     <apply block="only-yellow" use="only-yellow-usage">
-      <region name="yellow-woolrooms"/>
+        <region name="yellow-woolrooms"/>
     </apply>
     <apply enter="only-yellow" message="'7This is a '6YELLOW TEAM '7only wool room!">
-      <region name="yellow-woolrooms"/>
+        <region name="yellow-woolrooms"/>
     </apply>
     <apply enter="only-green" message="'7You may not enter the '2GREEN TEAM'7's base!">
-      <region name="green-spawn"/>
+        <region name="green-spawn"/>
     </apply>
     <apply enter="only-yellow" message="'7You may not enter the '6YELLOW TEAM'7's base!">
-      <region name="yellow-spawn"/>
+        <region name="yellow-spawn"/>
     </apply>
     <apply block="deny-all" message="'7You may not modify the base!">
-      <region name="green-spawn"/>
-      <region name="yellow-spawn"/>
+        <region name="green-spawn"/>
+        <region name="yellow-spawn"/>
     </apply>
     <apply block="deny-all" message="'7You may not modify the victory monument!">
-      <region name="green-victory"/>
-      <region name="yellow-victory"/>
+        <region name="green-victory"/>
+        <region name="yellow-victory"/>
     </apply>
     <apply block="deny-void" message="'7Do not not edit the void area!">
-      <region name="stairs"/>
+        <region name="stairs"/>
     </apply>
     <apply block="deny-all" kit="rage">
-      <region name="rage-area"/>
+        <region name="rage-area"/>
     </apply>
     <apply block="deny-all" kit="outside-rage">
-      <region name="outside-rage"/>
+        <region name="outside-rage"/>
     </apply>
   </regions>
-  <filters>
+<filters>
     <filter name="only-green">
       <team>green</team>
     </filter>
@@ -209,51 +208,51 @@
       <team>yellow</team>
     </filter>
     <filter name="only-green-usage">
-      <not>
-        <all>
-          <any>
-            <block>chest</block>
-            <block>workbench</block>
-          </any>
-          <team>yellow</team>
-        </all>
-      </not>
+        <not>
+            <all>
+                <any>
+                    <block>chest</block>
+                    <block>workbench</block>
+                </any>
+                <team>yellow</team>
+            </all>
+        </not>
     </filter>
     <filter name="only-yellow-usage">
-      <not>
-        <all>
-          <any>
-            <block>chest</block>
-            <block>workbench</block>
-          </any>
-          <team>green</team>
-        </all>
-      </not>
+        <not>
+            <all>
+                <any>
+                    <block>chest</block>
+                    <block>workbench</block>
+                </any>
+                <team>green</team>
+            </all>
+        </not>
     </filter>
     <filter name="deny-void">
-      <deny>
-        <void/>
-      </deny>
+        <deny>
+            <void/>
+        </deny>
     </filter>
-  </filters>
-  <wools>
+</filters>
+<wools>
     <wool team="green" color="green">
-      <block>-85,6,-1</block>
+        <block>-85,6,-1</block>
     </wool>
     <wool team="green" color="lime">
-      <block>-84,6,0</block>
+        <block>-84,6,0</block>
     </wool>
     <wool team="green" color="magenta">
-      <block>-85,6,1</block>
+        <block>-85,6,1</block>
     </wool>
     <wool team="yellow" color="yellow">
-      <block>85,6,-1</block>
+        <block>85,6,-1</block>
     </wool>
     <wool team="yellow" color="orange">
-      <block>85,6,1</block>
+        <block>85,6,1</block>
     </wool>
     <wool team="yellow" color="magenta">
-      <block>84,6,0</block>
+        <block>84,6,0</block>
   </wool>
-  </wools>
+</wools>
 </map>
