@@ -8,6 +8,8 @@
   </authors>
   <contributors>
     <contributor contributation="XML">Captain_Elliott</contributor>
+    <contributor contributation="Decoration of the obs spawn">zeldcat</contributor>
+    <contributor>NauticalYouth</contributor>
   </contributors>
   <teams>
     <team color="red" max="20" max-overfill="25">Red Team</team>
