@@ -1,75 +1,76 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
-  <name>Frozen</name>
-  <version>1.0.0</version>
-  <objective>Bring back the two enemy wools and place them on your wool monument!</objective>
-  <authors>
+<name>Frozen</name>
+<version>1.0.0</version>
+<objective>Bring back the two enemy wools and place them on your wool monument!</objective>
+<authors>
     <author>manucide</author>
-  </authors>
-  <contributors>
+</authors>
+<contributors>
     <contributor contributation="XML">Captain_Elliott</contributor>
     <contributor contributation="Decoration of the obs spawn">zeldcat</contributor>
     <contributor>NauticalYouth</contributor>
-  </contributors>
-  <teams>
+</contributors>
+<teams>
     <team color="red" max="20" max-overfill="25">Red Team</team>
     <team color="blue" max="20" max-overfill="25">Blue Team</team>
-  </teams>
-  <kits>
+</teams>
+<kits>
     <kit name="spawn" force="true">
-      <item slot="0">iron sword</item>
-      <item slot="1" enchantment="arrow infinite">bow</item>
-      <item slot="28">arrow</item>
-      <item slot="2" enchantment="durability:10">gold shovel</item>
-      <item slot="3" enchantment="durability:10">gold axe</item>
-      <item slot="4" enchantment="dig speed:2">stone pickaxe</item>
-      <item slot="5" damage="1">cooked fish</item>
-      <item slot="6" amount="64" damage="1">log</item>
+        <item slot="0">iron sword</item>
+        <item slot="1" enchantment="arrow infinite">bow</item>
+        <item slot="28">arrow</item>
+        <item slot="2" enchantment="durability:10">gold shovel</item>
+        <item slot="3" enchantment="durability:10">gold axe</item>
+        <item slot="4" enchantment="dig speed:2">stone pickaxe</item>
+        <item slot="5" damage="1">cooked fish</item>
+        <item slot="6" amount="64" damage="1">log</item>
     </kit>
     <kit name="red" parents="spawn">
-      <helmet color="993333" damage="-3000">leather helmet</helmet>
-      <chestplate color="993333" damage="-3000">leather chestplate</chestplate>
+        <helmet color="993333" damage="-3000">leather helmet</helmet>
+        <chestplate color="993333" damage="-3000">leather chestplate</chestplate>
     </kit>
     <kit name="blue" parents="spawn">
-      <helmet color="334CB2" damage="-3000">leather helmet</helmet>
-      <chestplate color="334CB2" damage="-3000">leather chestplate</chestplate>
+        <helmet color="334CB2" damage="-3000">leather helmet</helmet>
+        <chestplate color="334CB2" damage="-3000">leather chestplate</chestplate>
     </kit>
-  </kits>
-  <spawns>
+</kits>
+<spawns>
     <spawn team="blue" kit="blue" yaw="0">
-      <cuboid min="14,2,-6" max="20,2,-2"/>
+        <cuboid min="14,2,-6" max="20,2,-2"/>
     </spawn>
     <spawn team="red" kit="red" yaw="-180">
-      <cuboid min="21,2,-92" max="15,2,-96"/>
+        <cuboid min="21,2,-92" max="15,2,-96"/>
     </spawn>
     <default yaw="-180">
-      <point>17,77,-50</point>
+        <point>17,77,-50</point>
     </default>
-  </spawns>
-  <filters>
+</spawns>
+<filters>
     <filter name="only-blue">
-      <team>blue</team>
+        <team>blue</team>
     </filter>
     <filter name="only-red">
-      <team>red</team>
+        <team>red</team>
     </filter>
     <filter name="deny-icemelt">
         <not>
-          <all>
-            <any>
-                <filter name="allow-world"/>
-                <filter name="deny-all"/>
-            </any>
+            <all>
+                <any>
+                    <filter name="allow-world"/>
+                    <filter name="deny-all"/>
+                </any>
             <block>ice</block>
-          </all>
+            </all>
         </not>
     </filter>
     <filter name="no-void">
-      <deny>
-        <void/>
-      </deny>
-  </filters>
-  <regions>
+        <deny>
+            <void/>
+        </deny>
+    </filter>
+</filters>
+<regions>
     <!--Spawns-->
     <cuboid name="blue-spawn" min="11,2,-9" max="23,10,11"/>
     <cuboid name="red-spawn" min="24,2,-89" max="12,10,-109"/>
@@ -81,60 +82,60 @@
     <rectangle name="cyan" min="44,41" max="63,62"/>
     <rectangle name="green" min="-28,41" max="-9,62"/>
     <apply block="deny-all" messgae="You may not edit the spawn areas!">
-      <region name="blue-spawn"/>
-      <region name="red-spawn"/>
+        <region name="blue-spawn"/>
+        <region name="red-spawn"/>
     </apply>
     <apply enter="only-blue" message="You may not enter the enemy spawn area!">
-      <region name="blue-spawn"/>
+        <region name="blue-spawn"/>
     </apply>
     <apply enter="only-red" message="You may not enter the enemy spawn area!">
-      <region name="red-spawn"/>
+        <region name="red-spawn"/>
     </apply>
     <apply enter="only-blue" message="You may not enter your own wool rooms!">
-      <region name="purple"/>
-      <region name="yellow"/>
+        <region name="purple"/>
+        <region name="yellow"/>
     </apply>
     <apply enter="only-red" message="You may not enter your own wool rooms!">
-      <region name="cyan"/>
-      <region name="green"/>
+        <region name="cyan"/>
+        <region name="green"/>
     </apply>
     <apply block="no-void" message="You may not place blocks here!">
-      <negative>
-        <cuboid min="oo,oo,oo" max="-oo,-oo,-oo"/>
-      </negative>
+        <negative>
+            <cuboid min="oo,oo,oo" max="-oo,-oo,-oo"/>
+        </negative>
     </apply>
-  </regions>
-  <wools>
+</regions>
+<wools>
     <wools team="red">
-      <wool color="green">
-        <block>15,2,-99</block>
-      </wool>
-      <wool color="cyan">
-        <block>19,2,-99</block>
-      </wool>
+        <wool color="green">
+            <block>15,2,-99</block>
+        </wool>
+        <wool color="cyan">
+            <block>19,2,-99</block>
+        </wool>
     </wools>
     <wools team="blue">
-      <wool color="yellow">
-        <block>19,2,0</block>
-      </wool>
-      <wool color="purple">
-        <block>15,2,0</block>
-      </wool>
+        <wool color="yellow">
+            <block>19,2,0</block>
+        </wool>
+        <wool color="purple">
+            <block>15,2,0</block>
+        </wool>
     </wools>
-  </wools>
-  <gamerules>
+</wools>
+<gamerules>
     <doFireTick>false</doFireTick>
-  </gamerules>
-  <itemremove>
+</gamerules>
+<itemremove>
     <item>leather helmet</item>
     <item>leather chestplate</item>
     <item damage="1">cooked fish</item>
-  </itemremove>
-  <toolrepair>
+</itemremove>
+<toolrepair>
     <tool>iron sword</tool>
     <tool>bow</tool>
     <tool>stone pickaxe</tool>
     <tool>arrow</tool>
-  </toolrepair>
-  <maxbuidheight>45</maxbuildheight>
+</toolrepair>
+<maxbuidheight>45</maxbuildheight>
 </map>
