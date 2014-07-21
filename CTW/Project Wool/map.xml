@@ -125,22 +125,22 @@
     </union>
 <!-- Red wool rooms -->
     <apply block="only-red" use="only-red-usage">
-        <region name="blue-wool-rooms">
+        <region name="blue-wool-rooms"/>
     </apply>
     <apply enter="only-red" message="You may not enter your own wool room!">
-        <region name="blue-wool-rooms">
+        <region name="blue-wool-rooms"/>
     </apply>
 <!-- Blue wool rooms -->
     <apply block="only-blue" use="only-blue-usage">
-        <region name="red-wool-rooms">
+        <region name="red-wool-rooms"/>
     </apply>
     <apply enter="only-blue" message="You may not enter your own wool room!">
-        <region name="red-wool-rooms">
+        <region name="red-wool-rooms"/>
     </apply>
 <!-- Spawn protections -->
     <apply block="only-iron" message="You may not modify the spawns!">
-        <cylinder name="red-spawn" base="-16,0,46" height="20" radius="15">
-        <cylinder name="blue-spawn" base="-13,2,-113" height="20" radius="15">
+        <cylinder name="red-spawn" base="-16,0,46" height="20" radius="15"/>
+        <cylinder name="blue-spawn" base="-13,2,-113" height="20" radius="15"/>
     </apply>
     <union name="map">
         <rectangle name="middle" min="0,-51" max="-29,-16"/>
@@ -154,23 +154,23 @@
     <apply block="no-void" message="You may not build in the void!">
         <negative>
             <region name="map"/>
-        <negative>
+        </negative>
     </apply>
 </regions>
 <maxbuildheight>25</maxbuildheight>
 <!-- Wools you have to place to win -->
 <wools>
     <wool team="blue" color="purple">
-        <block location="1,8,-113"/>
+        <block>1,8,-113</block>
     </wool>
     <wool team="blue" color="lime">
-        <block location="1,8,-112"/>
+        <block>1,8,-112</block>
     </wool>
     <wool team="red" color="yellow">
-        <block location="-31,8,46"/>
+        <block>-31,8,46</block>
     </wool>
     <wool team="red" color="orange">
-        <block location="-31,8,45"/>
+        <block>-31,8,45</block>
     </wool>
 </wools>
 </map>
