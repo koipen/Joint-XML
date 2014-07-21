@@ -14,9 +14,9 @@
     <contributor contributation="Spawners and Feedback">_IQ</contributor>
     <contributor contributation="Spawners and Feedback">Aceman1998</contributor>
   </contributors>
-  <rules>
-    <rule>There is only one hill! you must have the majority of your team on BOTH the top and bottom of the hill top capture it!</rule>
-  </rules>
+  <broadcast>
+    <alert>There is only one hill! you must have the majority of your team on BOTH the top and bottom of the hill top capture it!</alert>
+  </broadcast>
   <teams>
       <team color="purple" max="20" max-overfill="25">Purple Team</team>
       <team color="orange" max="20" max-overfill="25">Orange Team</team
