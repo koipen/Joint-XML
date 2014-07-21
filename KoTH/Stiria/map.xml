@@ -40,7 +40,7 @@
   <spawns>
     <spawns team="purple" kit="purple">
       <spawn yaw="270">
-        <point>-270,20,-8</point>
+          <point>-270,20,-8</point>
       </spawn>
       <spawn yaw="-90">
         <point>-280,19,-14</point>
