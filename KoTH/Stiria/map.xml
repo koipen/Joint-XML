@@ -22,13 +22,14 @@
       <team color="orange" max="20" max-overfill="25">Orange Team</team>
   </teams>
   <kits>
-    <kit name="spawn" force="true">
+    <kit name="spawn" force="true" potion-particles="false">
       <item slot="0">stone sword</item>
       <item slot="1" enchantment="arrow infinite:1">bow</item>
       <item slot="2" amount="16">snowball</item>
       <item slot="3">golden apple</item>
       <item slot="4" amount="64" damage="1">cooked fish</item>
       <chestplate>chainmail chestplate</chestplate>
+      <potion duration="oo" amplifier="1">night vision</potion>
     </kit>
     <kit name="purple" parents="spawn">
       <leggings color="7F3FB2">leather leggings</leggings>
