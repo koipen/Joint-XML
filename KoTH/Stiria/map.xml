@@ -19,7 +19,7 @@
   </broadcasts>
   <teams>
       <team color="purple" max="20" max-overfill="25">Purple Team</team>
-      <team color="orange" max="20" max-overfill="25">Orange Team</team
+      <team color="orange" max="20" max-overfill="25">Orange Team</team>
   </teams>
   <kits>
     <kit name="spawn" force="true">
@@ -77,6 +77,10 @@
       </hill>
     </hills>
   </king>
+  <score>
+    <limit>350</limit>
+    <king/>
+  </score>
   <filters>
     <filter name="deny-icemelt">
         <not>
