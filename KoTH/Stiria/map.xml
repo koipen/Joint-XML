@@ -1,112 +1,112 @@
 <?xml version="1.0"?>
-<map proto=1.3.3>
-  <name>Stiria</name>
-  <version>1.0.0</version>
-  <objective>Control the center hill</objective>
-  <authors>
+<map proto="1.3.3">
+<name>Stiria</name>
+<version>1.0.0</version>
+<objective>Control the center hill</objective>
+<authors>
     <author contributation="Map Building and XML">Captain_Elliott</author>
     <author contributation="Map Building">merlinis</author>
     <author contributation="Map Building">Ay_Popsic</author>
-  </authors>
-  <contributors>
+</authors>
+<contributors>
     <contributor contributation="Minior Map Building">RedstoneOpenDoor</contributor>
     <contributor contributation="Build Slave and Ideas">Jon_Fam</contributor>
     <contributor contributation="Spawners and Feedback">_IQ</contributor>
     <contributor contributation="Spawners and Feedback">Aceman1998</contributor>
-  </contributors>
-  <broadcasts>
+</contributors>
+<broadcasts>
     <alert>There is only one hill! you must have the majority of your team on BOTH the top and bottom of the hill top capture it!</alert>
-  </broadcasts>
-  <teams>
-      <team color="purple" max="20" max-overfill="25">Purple Team</team>
-      <team color="orange" max="20" max-overfill="25">Orange Team</team>
-  </teams>
-  <kits>
+</broadcasts>
+<teams>
+    <team color="purple" max="20" max-overfill="25">Purple Team</team>
+    <team color="orange" max="20" max-overfill="25">Orange Team</team>
+</teams>
+<kits>
     <kit name="spawn" force="true" potion-particles="false">
-      <item slot="0">stone sword</item>
-      <item slot="1" enchantment="arrow infinite:1">bow</item>
-      <item slot="2" amount="16">snowball</item>
-      <item slot="3">golden apple</item>
-      <item slot="4" amount="64" damage="1">cooked fish</item>
-      <chestplate>chainmail chestplate</chestplate>
-      <potion duration="oo" amplifier="1">night vision</potion>
+        <item slot="0">stone sword</item>
+        <item slot="1" enchantment="arrow infinite:1">bow</item>
+        <item slot="2" amount="16">snowball</item>
+        <item slot="3">golden apple</item>
+        <item slot="4" amount="64" damage="1">cooked fish</item>
+        <chestplate>chainmail chestplate</chestplate>
+        <potion duration="oo" amplifier="1">night vision</potion>
     </kit>
     <kit name="purple" parents="spawn">
-      <leggings color="7F3FB2">leather leggings</leggings>
+        <leggings color="7F3FB2">leather leggings</leggings>
     </kit>
     <kit name="orange" parents="spawn">
-      <leggings color="D87F33">leather leggings</leggings>
+        <leggings color="D87F33">leather leggings</leggings>
     </kit>
-  </kits>
-  <spawns>
+</kits>
+<spawns>
     <spawns team="purple" kit="purple">
-      <spawn yaw="270">
-          <point>-270,20,-8</point>
-      </spawn>
-      <spawn yaw="-90">
-        <point>-280,19,-14</point>
-      </spawn>
-      <spawn yaw="-90">
-        <point>-276,18,-19</point>
-      </spawn>
-    </spaws>
-    <spawns team="orange" kit="orange">
-      <spawn yaw="0">
-        <point>120,20,-26</point>
-      </spawn>
-      <spawn yaw="90">
-        <point>-110,19,-20</point>
-      </spawn>
-      <spawn yaw="90">
-        <point>-114,18,-15</point>
-      </spawn>
+        <spawn yaw="270">
+            <point>-270,20,-8</point>
+        </spawn>
+        <spawn yaw="-90">
+            <point>-280,19,-14</point>
+        </spawn>
+        <spawn yaw="-90">
+            <point>-276,18,-19</point>
+        </spawn>
     </spawns>
-  </spawns>
-  <king>
+    <spawns team="orange" kit="orange">
+        <spawn yaw="0">
+            <point>120,20,-26</point>
+        </spawn>
+        <spawn yaw="90">
+            <point>-110,19,-20</point>
+        </spawn>
+        <spawn yaw="90">
+            <point>-114,18,-15</point>
+        </spawn>
+    </spawns>
+</spawns>
+<king>
     <hills>
-      <hill name="Hill" capture-time="12s" points="1" capture-rule="majority">
-        <capture>
-          <cylinder base="-194,16,-18" radius="9" height="0"/>
-          <cylinder base="-194,3,-18" radius="9" height="0"/>
-        </capture>
-        <progress>
-          <cylinder base="-194,1,-18" radius="9" height="15"/>
-        </progress>
-        <captured>
-          <cuboid min="-179,28,-32" max="-208,39,-3"/>
-        </captured>
-      </hill>
+        <hill name="Hill" capture-time="12s" points="1" capture-rule="majority">
+            <capture>
+                <cylinder base="-194,16,-18" radius="9" height="0"/>
+                <cylinder base="-194,3,-18" radius="9" height="0"/>
+            </capture>
+            <progress>
+                <cylinder base="-194,1,-18" radius="9" height="15"/>
+            </progress>
+            <captured>
+                <cuboid min="-179,28,-32" max="-208,39,-3"/>
+            </captured>
+        </hill>
     </hills>
-  </king>
-  <score>
+</king>
+<score>
     <limit>350</limit>
     <king/>
-  </score>
-  <filters>
+</score>
+<filters>
     <filter name="deny-icemelt">
         <not>
-          <all>
-            <any>
-                <filter name="allow-world"/>
-                <filter name="deny-all"/>
-            </any>
-            <block>ice</block>
-          </all>
-        </not>
+            <all>
+                <any>
+                    <filter name="allow-world"/>
+                    <filter name="deny-all"/>
+                </any>
+                    <block>ice</block>
+                </all>
+            </not>
     </filter>
-  </filters>
-  <regions>
+</filters>
+<regions>
     <apply block="deny-block deny-icemelt">
-      <rectangle min="oo,oo" max="-oo,-oo"/>
+        <rectangle min="oo,oo" max="-oo,-oo"/>
     </apply>
-  </regions>
-  <toolrepair>
+</regions>
+<toolrepair>
     <tool>stone sword</tool>
     <tool>iron sword</tool>
     <tool>bow</tool>
     <tool>arrow</tool>
-  </toolrepair>
-  <itemremove>
+</toolrepair>
+<itemremove>
     <item>fish</item>
-  </itemremove>
+</itemremove>
 </map>
