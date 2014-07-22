@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Harmony</name>
+<version>1.0.0</version>
+<objective>
+    Destroy the enemy's monument
+</objective>
+<authors>
+    <author>DoomRobotBoy</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">lord_creeper01</contributor>
+</contributors>
+<teams>
+    <team color="dark purple" max="30">Purple Team</team>
+    <team color="yellow" max="30">Yellow Team</team>
+</teams>
+<kits>
+    <kit name="spawn">
+    </kit>
+</kits>
+<spawns>
+    <spawn team="purple" yaw="0" kit="blue">
+        <cuboid min="989,114,444" max="998,114,446"/>
+    </spawn>
+    <spawn team="yellow" yaw="0" kit="green">
+        <cuboid min="943,114,444" max="952,114,446"/>
+    </spawn>
+    <default yaw="0">
+        <cuboid min="969,117,441" max="972,117,444"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="no-void" parents="allow-all">
+        <deny><void/></deny>
+    </filter>
+</filters>
+<regions>
+    <union name="spawns">
+        <cylinder name="purple-spawn" base="23.5,0,36.5" height="25" radius="9"/>
+        <cylinder name="yellow-spawn" base="23.5,0,-64.5" height="25" radius="9"/>
+    </union>
+    <union name="monument-base">
+        <cylinder name="yellow-base" base="23.5,0,-91.5" radius="5" height="25"/>
+        <cylinder name="purple-base" base="23.5,0,63.5" radius="5" height="25"/>
+    </union>
+    <union name="right-lane">
+        <cuboid name="allow-region-r" max="42,oo,-4" min="33,6,-24"/>
+        <cuboid name="deny-region-r" max="33,6,-24" min="42,0,-4"/>
+    </union>
+    <union name="left-lane">
+        <cuboid name="allow-region-l" max="14,oo,-4" min="5,6,-24"/>
+        <cuboid name="deny-region-l" max="14,0,4" min="5,6,-24"/>
+    </union>
+    <apply block="deny-blocks" message="You may not break the spawns!">
+        <region name="spawns"/>
+    </apply>
+    <apply block="deny-world">
+        <region name="spawns"/>
+        <region name="monument-base"/>
+    </apply>
+    <apply block="deny-block">
+        <region name="deny-region-l"/>
+        <region name="deny-region-r"/>
+    </apply>
+</regions>
+<destroyables name="Monument" materials="packed ice;stained glass:3">
+    <destroyable owner="purple">
+        <region name="purple-base"/>
+    </destroyable>
+    <destroyable owner="yellow">
+        <region name="yellow-base"/>
+    </destroyable>
+</destroyables>
+</map>

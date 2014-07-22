@@ -29,18 +29,37 @@
         <item slot="8">bucket</item>
         <item slot="9" amount="64" damage="1">leaves 2</item>
         <item slot="28" amount="64">arrow</item>
-        <helmet>leather helmet</helmet>
-        <chestplate enchantment="protection environmental">leather chestplate</chestplate>
+        <helmet damage="-3000">iron helmet</helmet>
+        <chestplate damage="-3000" enchantment="protection environmental">chainmail chestplate</chestplate>
+    </kit>
+    <kit name="red" parents="spawn">
+        <leggings color="993333" damage="-3000">leather leggings</leggings>
+        <boots damage="-3000" enchantment="protection fall">iron boots</boots>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <leggings color="334CB2" damage="-3000">leather leggings</leggings>
+        <boots damage="-3000" enchantment="protection fall">iron boots</boots>
     </kit>
 </kits>
-<!--Waiting for Map maker´s reply about itemremoving the killstreak items and spawnkit items-->
 <itemremove>
+    <item>apple</item>
+    <item>bucket</item>
+    <item>leaves 2</item>
+    <item>iron helmet</item>
+    <item>chainmail chestplate</item>
 </itemremove>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+    <tool>stone pickaxe</tool>
+    <tool>iron axe</tool>
+    <tool>iron spade</tool>
+</toolrepair>
 <spawns>
-    <spawn team="blue" kit="spawn" safe="true" yaw="180">
+    <spawn team="blue" kit="blue" safe="true" yaw="180">
         <cuboid min="-2,20,150" max="3,20,146"/>
     </spawn>
-    <spawn team="red" kit="spawn" safe="true" yaw="0">
+    <spawn team="red" kit="red" safe="true" yaw="0">
         <cuboid min="3,20,-149" max="2,20,-145"/>
     </spawn>
     <default yaw="-90">
