@@ -2,10 +2,10 @@
 <map proto="1.3.3">
 <name>Mythical Marsh</name>
 <version>1.0</version>
-<objective>Capture both wools of enemies' team and destroy there monument.</objective>
+<objective>Capture both wools of enemies' team and destroy their monument.</objective>
 <authors>
     <author>rockymine</author>
-    <author contribution="Caves, ideas, Etc">LieutenandPants</author>
+    <author contribution="Caves, ideas, Etc">LieutenantPants</author>
 </authors>
 <contributors>
     <contributor contribution="Wool Room Designer">Guicotsch</contributor>
