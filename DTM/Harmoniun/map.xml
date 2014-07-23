@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>Harmonium</name>
+<version>1.0.0</version>
+<objective>
+    Destroy the enemy's monument
+</objective>
+<authors>
+    <author>Minii_</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">lord_creeper01</contributor>
+</contributors>
+<teams>
+    <team color="dark purple" max="12">Purple Team</team>
+    <team color="yellow" max="12">Yellow Team</team>
+</teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0">stone sword</item>
+        <item slot="1" enchantment="arrow infinite:1">bow</item>
+        <item slot="28">arrow</item>
+        <item slot="2">iron axe</item>
+        <item slot="3" enchantment="dig speed:1">diamond pickaxe</item>
+        <item slot="4" amount="64">log</item>
+        <item slot="5" amount="64">smooth brick</item>
+        <item slot="6" amount="32">golden carrot</item>
+        <potion duration="2" amplifier="1">heal</potion>
+        <potion duration="5">damage resistance</potion>
+    </kit>
+    <kit name="yellow" parents="spawn">
+        <helmet damage="-3000" color="E5E533">leather helmet</helmet>
+        <chestplate damage="-3000" color="E5E533" enchantment="protection environmental:1">leather chestplate</chestplate>
+        <leggings damage="-3000" color="E5E533">leather leggings</leggings>
+        <boots damage="-3000" color="E5E533">leather boots</boots>
+    </kit>
+    <kit name="purple" parents="spawn">
+        <helmet damage="-3000" color="7F3FB2">leather helmet</helmet>
+        <chestplate damage="-3000" color="7F3FB2" enchantment="protection environmental:1">leather chestplate</chestplate>
+        <leggings damage="-3000" color="7F3FB2">leather leggings</leggings>
+        <boots damage="-3000" color="7F3FB2">leather boots</boots>
+    </kit>
+</kits>
+<itemremove>
+    <item>golden carrot</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+</itemremove>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>arrow</tool>
+    <tool>iron axe</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>bow</tool>
+</toolrepair>
+<spawns>
+    <spawn team="purple" yaw="0" kit="purple">
+        <cylinder base="23,12,-36" radius="1" height="1"/>
+    </spawn>
+    <spawn team="yellow" yaw="0" kit="yellow">
+        <cylinder base="23,12,-64" radius="1" height="1"/>
+    </spawn>
+    <default yaw="0">
+        <cylinder base="23,20,-27" radius="1" height="1"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="no-void" parents="allow-all">
+        <deny><void/></deny>
+    </filter>
+</filters>
+<regions>
+    <union name="spawns">
+        <cylinder name="purple-spawn" base="23.5,0,36.5" height="26" radius="9"/>
+        <cylinder name="yellow-spawn" base="23.5,0,-64.5" height="26" radius="9"/>
+    </union>
+    <union name="monument-base">
+        <cylinder name="yellow-base" base="23.5,0,-91.5" radius="5" height="25"/>
+        <cylinder name="purple-base" base="23.5,0,63.5" radius="5" height="25"/>
+    </union>
+    <union name="right-lane">
+        <cuboid name="allow-region-r" max="42,oo,-4" min="33,6,-24"/>
+        <cuboid name="deny-region-r" max="33,6,-24" min="42,0,-4"/>
+    </union>
+    <union name="left-lane">
+        <cuboid name="allow-region-l" max="14,oo,-4" min="5,6,-24"/>
+        <cuboid name="deny-region-l" max="14,0,4" min="5,6,-24"/>
+    </union>
+    <rectangle name="middle-lane" max="28,-23" min="19,-5"/>
+    <apply block="deny-blocks" message="You may not break the spawns!">
+        <region name="spawns"/>
+    </apply>
+    <apply block="deny-world">
+        <region name="spawns"/>
+    </apply>
+    <apply block="deny-block">
+        <region name="deny-region-l"/>
+        <region name="deny-region-r"/>
+    </apply>
+    <apply block="no-void">
+        <negative>
+            <region name="spawns"/>
+            <region name="right-lane"/>
+            <region name="left-lane"/>
+            <region name="muddle-lane"/>
+        </negative>
+    </apply>
+</regions>
+<destroyables name="Monument" materials="packed ice;stained glass:3">
+    <destroyable owner="purple">
+        <region name="purple-base"/>
+    </destroyable>
+    <destroyable owner="yellow">
+        <region name="yellow-base"/>
+    </destroyable>
+</destroyables>
+</map>
