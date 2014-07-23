@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+<name>DEATHIsle </name>
+<version>1.0.0</version>
+<objective>
+Kill all enemies to win the match.
+</objective>
+<authors>
+    <author>Theta_</author>
+</authors>
+<contributors>
+    <contributor contribution="Xml">lord_creeper01</contributor>
+</contributors>
+<teams>
+    <team color="gold" max="12">Orange Team</team>
+    <team color="dark purple" max="12">Magenta Team</team>
+</teams>
+<rage/>
+<kits>
+    <kit name="teams">
+        <item slot="0" enchantment="damage all:10" damage="-3000">iron sword</item>
+        <item slot="1" name="`3Paralysis Launcher" lore="`5This bow Shoots splash potions|Stop people in their tracks with slowness and blindness!|Sneak up on your enemies!" enchantment="durability">bow</item>
+        <item slot="2">boat</item>
+        <item slot="3" amount="32">vine</item>
+        <item slot="4" amount="16">cooked fish</item>
+        <item slot="5" amount="1">arrow</item>
+        <potion duration="4" amplifier="2">heal</potion>
+    </kit>
+    <kit name="orange" parents="teams">
+        <chestplate color="D87F33">leather chestplate</chestplate>
+        <boots color="D87F33">leather boots</boots>
+    </kit>
+    <kit name="magenta" parents="teams">
+        <chestplate color="B24CD8">leather chestplate</chestplate>
+        <boots color="B24CD8">leather boots</boots>
+    </kit>
+</kits>
+<modifybowprojectile>
+    <potion duration="5" amplifier="10">slow</potion>
+    <potion duration="5" amplifier="10">blindness</potion>
+</modifybowprojectile>
+<itemremove>
+    <item>vine</item>
+    <item>arrow</item>
+    <item>cooked fish</item>
+    <item>sapling</item>
+    <item>apple</item>
+    <item>leather chestplate</item>
+    <item>leather boots</item>
+    <item>chest</item>
+</itemremove>
+<filters>
+    <filter name="allow-some" parents="deny-all">
+        <block>leaves</block>
+        <block>water lily</block>
+        <block>vine</block>
+    </filter>
+</filters>
+<spawns>
+    <spawn team="magenta" kit="magenta" yaw="90">
+        <cylinder base="264.5,52,704.5" radius="2" height="0"/>
+    </spawn>
+    <spawn team="orange" kit="orange" yaw="90">
+        <cylinder base="264.5,52,789.5" radius="2" height="0"/>
+    </spawn>
+    <default yaw="-90">
+        <cylinder base="288.5,57,746.5" radius="2" height="0"/>
+    </default>
+</spawns>
+<regions>
+    <rectangle name="playable" min="-oo,-oo" max="oo,oo"/>
+    <apply block="allow-some">
+        <region name="playable"/>
+    </apply>
+</regions>
+<blitz>
+    <time>5m</time>
+    <lives>1</lives>
+</blitz>
+</map>
