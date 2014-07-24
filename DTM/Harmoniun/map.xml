@@ -71,6 +71,7 @@
         <deny><void/></deny>
     </filter>
 </filters>
+<maxbuildheight>30</maxbuildheight>
 <regions>
     <union name="spawns">
         <cylinder name="purple-spawn" base="23.5,0,36.5" height="26" radius="9"/>
