@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<map proto="1.3.3">
+  <name>Halo</name>
+  <version>1.0.0</version>
+  <objective>Survivors must score 30 points!</objective>
+  <teams>
+    <team color="gray" max="4" max-overfill="4">Juggernauts</team>
+    <team color="white" max="10" max-overfill="10">Survivors</team>
+  </teams>
+  <kits>
+    <kit name="Juggernauts" force="true">
+      <item slot="0">iron sword</item>
+      <item slot="1" enchantment="arrow knockback">bow</item>
+      <item slot="2" amount="2">arrow</item>
+      <helmet color="4C4C4C">leather helmet</helmet>
+      <chestplate color="4C4C4C">leather chestplate</chestplate>
+      <leggings>diamond leggings</leggings>
+      <boots>diamond boots</boots>
+      <potion duration="oo" amplifier="1">slow</potion>
+    </kit>
+    <kit name="survivors" force="true">
+      <item slot="0">iron sword</item>
+      <item slot="1">bow</item>
+      <item amount="32">arrow</item>
+      <helmet color="FFFFFF">leather helmet</helmet>
+      <chestplate color="FFFFFF">leather chestplate</chestplate>
+      <leggings color="FFFFFF">leather leggings</leggings>
+      <boots color="FFFFFF">leather boots</boots>
+    </kit>
+  </kits>
+  <spawns>
+    <spawn team="Juggernauts" kit="Juggernauts" yaw="">
+      <!--Insert Region Here-->
+    </spawn>
+    <spawn team="Survivors" kit="Survivors" yaw="">
+      <!--Insert Region Here-->
+    </spawn>
+    <default yaw="">
+      <!--Insert Region Here-->
+    </default>
+  </spawns>
+  <regions>
+    <apply block="deny-all">
+      <rectangle min="oo,oo" max="-oo,-oo"/>
+    </apply>
+  </regions>
+  <!--Add portals and score boxes 'cos im to lazy to do it my self so brummy is doing it-->
+</map>
