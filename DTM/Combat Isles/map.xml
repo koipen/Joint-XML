@@ -43,7 +43,7 @@
     </destroyable>
 </destroyables>
 <regions>
-    <apply block="deny-world" message="You may not leave the playing field!">
+    <apply block="deny-all" message="You may not leave the playing field!">
         <negative>
             <cuboid min="48,1,-79" max="-22,82,38"/>
         </negative>
