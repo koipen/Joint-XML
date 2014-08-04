@@ -12,8 +12,8 @@
     <contributor contribution="XML">orky48</contributor>
 </contributors>
 <teams>
-    <team color="blue" max="??">Defenders</team>
-    <team color="dark red" max="??">Attackers</team>
+    <team color="blue" max="15">Defenders</team>
+    <team color="dark red" max="15">Attackers</team>
 </teams>
 <kits>
     <kit name="attackers">
@@ -98,7 +98,7 @@
         <cuboid name="range-portal" min="-543,129,-159" max="-542,132,-157"/>
     </apply>
     <apply kit="melee">
-        <cuboid name="melee-portal" min-"-543,129,-542" max="-542,132,-540"/>
+        <cuboid name="melee-portal" min="-543,129,-542" max="-542,132,-540"/>
     </apply>
 </regions>
 <portals>
