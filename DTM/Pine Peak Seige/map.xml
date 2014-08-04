@@ -56,7 +56,7 @@
         <item slot="2" enchantment="dig speed:2;durability:3">iron pickaxe</item>
         <item slot="3" enchantment="dig speed:2;durability:3">iron axe</item>
         <item slot="4" amount="64">pumpkin pie</item>
-        <item slot="1" damage="8227" potions="health boost:10:3:false;damage resistence:10:3:false">potion</item>
+        <item slot="1" damage="8227" potions="health boost:10:3:false;damage resistance:10:3:false">potion</item>
         <item slot="7" amount="64">log</item>
         <item slot="8" amount="64" damage="3">stained glass</item>
         <item slot="33" amount="64">ladder</item>
@@ -125,7 +125,7 @@
     <item>iron chestplate</item>
     <item>iron leggings</item>
     <item>iron boots</item>
-    <item damage="8227" potions="health boost:10:3:false;danage resistence:10:3:false">potion</item>
+    <item damage="8227" potions="health boost:10:3:false;damage resistance:10:3:false">potion</item>
     <item>log</item>
     <item>log 2</item>
     <item>chainmail helmet</item>
