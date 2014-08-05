@@ -14,6 +14,8 @@
         <box value="2" team="Ducks" cooldown="1">
              <cuboid min="-31,31,0" max="-38,35,-1"/>
         </box>
+        <time>5m</time>
+        <limit>-1</limit>
     </score>
     <time result="Ducks">3m</time>
     <kits force="ture" potion-particles="false">
