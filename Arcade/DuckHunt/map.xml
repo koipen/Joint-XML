@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
     <name>Duck Hunt</name>
-    <version>0.1</version>
+    <version>0.2</version>
     <objective>The shooters must kill all of the ducks before the time runs out!</objective>
     <authors>
         <author>Captain_Elliott</author>
@@ -31,22 +31,22 @@
             <point>39,6,0</point>
         </spawn>
         <spawn team="shooters" kit="shooters" yaw="180">
-            <point>-38,5,48</point>
-            <point>-33,5,48</point>
-            <point>-28,5,48</point>
-            <point>-23,5,48</point>
-            <point>-18,5,48</point>
-            <point>-12,5,48</point>
-            <point>-7,5,48</point>
-            <point>-2,5,48</point>
-            <point>2,5,48</point>
-            <point>7,5,48</point>
-            <point>12,5,48</point>
-            <point>17,5,48</point>
-            <point>22,5,48</point>
-            <point>27,5,48</point>
-            <point>32,5,48</point>
-            <point>37,5,48</point>
+            <point>-38,15,23</point>
+            <point>-33,15,23</point>
+            <point>-28,15,23</point>
+            <point>-23,15,23</point>
+            <point>-18,15,23</point>
+            <point>-12,15,23</point>
+            <point>-7,15,23</point>
+            <point>-2,15,23</point>
+            <point>2,15,23</point>
+            <point>7,15,23</point>
+            <point>12,15,23</point>
+            <point>17,15,23</point>
+            <point>22,15,23</point>
+            <point>27,15,23</point>
+            <point>32,15,23</point>
+            <point>37,15,23</point>
         </spawn>
         <default yaw="0">
             <point>0,44,0</point>
