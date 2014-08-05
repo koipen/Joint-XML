@@ -70,4 +70,11 @@
             </negative>
         </apply>
     </regions>
+    <mob-disguises>
+        <disguise type="chicken">
+            <filter>
+                <team>ducks</team>
+            </filter>
+        </disguise>
+    </mob-disguises>
 </map>
