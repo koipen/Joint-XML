@@ -19,7 +19,7 @@
     <time result="Ducks">3m</time>
     <kits force="ture" potion-particles="false">
         <kit name="shooters">
-            <item slot="0" enchantment="arrow damage:10; arrow infinite:1" name="`8Pistol `41 Shot, 1 Kill">bow</item>
+            <item slot="0" enchantment="arrow damage:10;arrow infinite:1" name="`8Pistol `41 Shot, 1 Kill">bow</item>
             <item slot="28">arrow</item>
             <potion duration="oo" amplifier="10">damage resistance</potion>
         </kit>
@@ -28,10 +28,10 @@
         </kit>
     </kits>
     <spawns>
-        <spawn team="ducks" yaw="90">
+        <spawn team="ducks" kit="ducks" yaw="90">
             <point>39,6,0</point>
         </spawn>
-        <spawn team="shooters" yaw="180">
+        <spawn team="shooters" kit="shooters" yaw="180">
             <point>-38,5,48</point>
             <point>-33,5,48</point>
             <point>-28,5,48</point>
