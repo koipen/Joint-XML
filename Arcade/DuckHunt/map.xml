@@ -11,7 +11,7 @@
         <team color="gray" max="16" max-overfill="16">Shooters</team>
     </teams>
     <score>
-        <box value="2" team="Ducks" cooldown="1">
+        <box value="5" team="Ducks" cooldown="1">
              <cuboid min="-31,31,0" max="-38,35,-1"/>
         </box>
         <time>5m</time>
@@ -20,17 +20,21 @@
     <time result="Ducks">3m</time>
     <kits force="ture" potion-particles="false">
         <kit name="shooters">
-            <item slot="0" enchantment="arrow damage:10;arrow infinite:1" name="`8Pistol `41 Shot, 1 Kill">bow</item>
+            <item slot="0" enchantment="arrow damage:10;arrow infinite:1" name="`8Pistol `41 Shot, 1 Kill" damage="-3000">bow</item>
             <item slot="28">arrow</item>
             <potion duration="oo" amplifier="10">damage resistance</potion>
         </kit>
         <kit name="ducks">
-            <potion duration="oo" amplifier="2">speed</potion>
+            <potion duration="oo" amplifier="5">speed</potion>
+            <potion duration="3" amplifier="4">damage resistance</potion>                                                                                                      
         </kit>
     </kits>
+    <hunger>
+        <depletion>off</depletion>
+    </hunger>
     <spawns>
         <spawn team="ducks" kit="ducks" yaw="90">
-            <point>39,6,0</point>
+            <point>39,6,-0.5</point>
         </spawn>
         <spawn team="shooters" kit="shooters" yaw="180">
             <point>-38,15,23</point>
@@ -60,6 +64,9 @@
                 <team>ducks</team>
             </not>
         </filter>
+            <filter name="only-ducks">
+                <team>ducks</team>
+            </filter>
     </filters>
     <regions>
         <apply block="deny-all">
@@ -75,17 +82,20 @@
         </apply>
     </regions>
     <portals>
-        <portal x="69" y="7" yaw="90">
+        <portal x="69" y="7">
             <cuboid min="-34,6,0" max="-39,10,-1"/>
         </portal>
-        <portal x="69" y="7" yaw="90">
+        <portal x="69" y="7">
             <cuboid min="-34,13,0" max="-39,16,-1"/>
         </portal>
-         <portal x="69" y="7" yaw="90">
+         <portal x="69" y="7">
             <cuboid min="-34,19,0" max="-39,22,-1"/>
         </portal>
-        <portal x="69" y="7" yaw="90">
+        <portal x="69" y="7">
             <cuboid min="-34,25,0" max="-39,28,-1"/>
+        </portal>
+        <portal x="69" y="-25">
+            <cuboid min="-31,31,0" max="-38,35,-1"/>
         </portal>
     </portals>
     <mob-disguises>
