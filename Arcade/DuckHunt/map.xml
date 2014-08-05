@@ -68,7 +68,7 @@
                 <cuboid min="-39,6,0" max="40,31,-1"/>
             </negative>
         </apply>
-        <apply enter="deny-all" message="You may not hide there!">
+        <apply enter="deny-all" message="You may not hide here!">
             <cuboid min="35,6,0" max="41,38,-2"/>
         </apply>
     </regions>
