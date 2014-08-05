@@ -75,16 +75,16 @@
         </apply>
     </regions>
     <portals>
-        <portal x="@34" y="@13" z="@0 " yaw="90">
+        <portal x="69" y="7" yaw="90">
             <cuboid min="-34,6,0" max="-39,10,-1"/>
         </portal>
-        <portal x="@34" y="@19" z="@0" yaw="90">
+        <portal x="69" y="7" yaw="90">
             <cuboid min="-34,13,0" max="-39,16,-1"/>
         </portal>
-         <portal x="@34" y="@25" z="@0" yaw="90">
-            <cuboid min="-34,19,0"s max="-39,22,-1"/>
+         <portal x="69" y="7" yaw="90">
+            <cuboid min="-34,19,0" max="-39,22,-1"/>
         </portal>
-        <portal x="@34" y="@31" z="@0" yaw="90">
+        <portal x="69" y="7" yaw="90">
             <cuboid min="-34,25,0" max="-39,28,-1"/>
         </portal>
     </portals>
