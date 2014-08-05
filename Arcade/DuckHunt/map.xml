@@ -10,12 +10,11 @@
         <team color="white" max="20" max-overfill="25">Ducks</team>
         <team color="gray" max="16" max-overfill="16">Shooters</team>
     </teams>
-    <rage/>
-    <blitz>
-        <time>3m</time>
-        <lives>1</lives>
-        <title>Duck Hunt</title>
-    </blitz>
+    <score>
+        <box value="2" team="Ducks" cooldown="1">
+             <cuboid min="-31,31,0" max="-38,35,-1"/>
+        </box>
+    </score>
     <time result="Ducks">3m</time>
     <kits force="ture" potion-particles="false">
         <kit name="shooters">
@@ -69,7 +68,24 @@
                 <cuboid min="-39,6,0" max="40,31,-1"/>
             </negative>
         </apply>
+        <apply enter="deny-all" message="You may not hide there!">
+            <cuboid min="35,6,0" max="41,38,-2"/>
+        </apply>
     </regions>
+    <portals>
+        <portal x="@34" y="@13" z="@0" yaw="90">
+            <cuboid min="-34,6,0" max="-38,10,-1"/>
+        </portal>
+        <portal x="@34" y="@19" z="@0" yaw="90">
+            <cuboid min="-34,13,0" max="-38,16,-1"/>
+        </portal>
+         <portal x="@34" y="@25" z="@0" yaw="90">
+            <cuboid min="-34,19,0" max="-38,22,-1"/>
+        </portal>
+        <portal x="@34" y="@31" z="@0" yaw="90">
+            <cuboid min="-34,25,0" max="-38,28,-1"/>
+        </portal>
+    </portals>
     <mob-disguises>
         <disguise type="chicken">
             <filter>
