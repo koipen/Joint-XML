@@ -14,6 +14,12 @@
         <box value="5" team="Ducks" cooldown="1">
              <cuboid min="-31,31,0" max="-38,35,-1"/>
         </box>
+         <box value="1" team="Ducks" cooldown="1">
+             <cuboid min="-34,6,0" max="-39,10,-1"/>
+             <cuboid min="-34,13,0" max="-39,16,-1"/>
+             <cuboid min="-34,19,0" max="-39,22,-1"/>
+             <cuboid min="-34,25,0" max="-39,28,-1"/>
+        </box>
         <time>5m</time>
         <limit>-1</limit>
     </score>
