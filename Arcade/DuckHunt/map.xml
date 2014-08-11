@@ -27,8 +27,8 @@
     <kits force="ture" potion-particles="false">
         <kit name="shooters">
             <item slot="1" enchantment="arrow damage:10;arrow infinite:1" name="`8Pistol" damage="-3000">bow</item>
-            <item slot="2" enchantment="arrow damage:10;arrow infinite:1" attribute="generic.movementSpeed:add:-1" name="`4sniper" damage="-3000">bow</item>
-            <item slot="0" enchantment="arrow damage:10;arrow infinite:1" attribute="generic.movementSpeed:add:1" name="`4shotgun" damage="-3000">bow</item>
+            <item slot="2" enchantment="arrow damage:10;arrow infinite:1" attributes="generic.movementSpeed:add:-1" name="`4sniper" damage="-3000">bow</item>
+            <item slot="0" enchantment="arrow damage:10;arrow infinite:1" attributes="generic.movementSpeed:add:1" name="`4shotgun" damage="-3000">bow</item>
             <item slot="28">arrow</item>
             <potion duration="oo" amplifier="10">damage resistance</potion>
         </kit>
