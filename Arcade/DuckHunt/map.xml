@@ -26,7 +26,9 @@
     <time result="Ducks">3m</time>
     <kits force="ture" potion-particles="false">
         <kit name="shooters">
-            <item slot="0" enchantment="arrow damage:10;arrow infinite:1" name="`8Pistol `41 Shot, 1 Kill" damage="-3000">bow</item>
+            <item slot="1" enchantment="arrow damage:10;arrow infinite:1" name="`8Pistol" damage="-3000">bow</item>
+            <item slot="2" enchantment="arrow damage:10;arrow infinite:1" attribute="generic.movementSpeed:add:-1" name="`4sniper" damage="-3000">bow</item>
+            <item slot="0" enchantment="arrow damage:10;arrow infinite:1" attribute="generic.movementSpeed:add:1" name="`4shotgun" damage="-3000">bow</item>
             <item slot="28">arrow</item>
             <potion duration="oo" amplifier="10">damage resistance</potion>
         </kit>
@@ -88,19 +90,19 @@
         </apply>
     </regions>
     <portals>
-        <portal x="69" y="7">
+        <portal x="69.0" y="7.0">
             <cuboid min="-34,6,0" max="-39,10,-1"/>
         </portal>
-        <portal x="69" y="7">
+        <portal x="69.0" y="7.0">
             <cuboid min="-34,13,0" max="-39,16,-1"/>
         </portal>
-         <portal x="69" y="7">
+         <portal x="69.0" y="7.0">
             <cuboid min="-34,19,0" max="-39,22,-1"/>
         </portal>
-        <portal x="69" y="7">
+        <portal x="69.0" y="7.0">
             <cuboid min="-34,25,0" max="-39,28,-1"/>
         </portal>
-        <portal x="69" y="-25">
+        <portal x="69.0" y="-25.0">
             <cuboid min="-31,31,0" max="-38,35,-1"/>
         </portal>
     </portals>
