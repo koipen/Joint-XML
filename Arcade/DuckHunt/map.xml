@@ -90,20 +90,17 @@
         </apply>
     </regions>
     <portals>
-        <portal x="69.0" y="7.0">
-            <cuboid min="-34,6,0" max="-39,10,-1"/>
+        <portal x="@34.0" y="@13.5" z="@0.0" yaw="@90">
+            <cuboid min="-34,6,0" max="-38,10,-1"/>
         </portal>
-        <portal x="69.0" y="7.0">
-            <cuboid min="-34,13,0" max="-39,16,-1"/>
+        <portal x="@34.0" y="@19.5" z="@0.0" yaw="@90">
+           <cuboid min="-34,13,0" max="-38,16,-1"/>
         </portal>
-         <portal x="69.0" y="7.0">
-            <cuboid min="-34,19,0" max="-39,22,-1"/>
+        <portal x="@34.0" y="@25.5" z="@0.0" yaw="@90">
+            <cuboid min="-34,19,0" max="-38,22,-1"/>
         </portal>
-        <portal x="69.0" y="7.0">
-            <cuboid min="-34,25,0" max="-39,28,-1"/>
-        </portal>
-        <portal x="69.0" y="-25.0">
-            <cuboid min="-31,31,0" max="-38,35,-1"/>
+        <portal x="@34.0" y="@31.5" z="@0.0" yaw="@90">
+           <cuboid min="-34,25,0" max="-38,28,-1"/>
         </portal>
     </portals>
     <mob-disguises>
