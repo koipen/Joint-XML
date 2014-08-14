@@ -105,7 +105,7 @@
         <renew>redstone block</renew>
         <replace>air</replace>
     </renewable>
-        <renewable rate="2" grow="true" particles="true" sound="true" avoid-entities="true">
+      <renewable rate="2" grow="true" particles="true" sound="true" avoid-entities="true">
         <region>
             <rectangle min="34,-220" max="2,-232"/>
             <rectangle min="1,7" max="34,19"/>
