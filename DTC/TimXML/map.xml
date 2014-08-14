@@ -117,7 +117,7 @@
 <modes>
     <mode after="2m" material="obsidian" name="`eOBSIDIAN MODE"/>
     <mode after="15m" material="gold block" name="`eGOLD MODE"/>
-    <mode after="20m" mateiral="glass" name="`eGLASS MODE"/>
+    <mode after="20m" material="glass" name="`eGLASS MODE"/>
 </modes>
 <cores mode-changes="true" material="bedrock">
     <core team="red">
