@@ -48,7 +48,6 @@
         <cuboid min="11,31-51" max="13,31,-49"/>
     </default>
 </spawns>
-<maxbuildheight>40</maxbuildheight>
 <regions>
     <apply block="deny-all" message="You may not build outside of the map!">
         <negative>
@@ -87,4 +86,5 @@
 <killreward>
     <item>golden apple</item>
 </killreward>
+<maxbuildheight>40</maxbuildheight>
 </map>
