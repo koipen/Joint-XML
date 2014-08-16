@@ -39,10 +39,10 @@
 </kits>
 <spawns>
     <spawn team="blue" kit="blue" yaw="0">
-        <block>-39,9,-166</block>
+        <point>-39,9,-166</point>
     </spawn>
     <spawn team="red" kit="red" yaw="180">
-        <block>-29,9,64</block>
+        <point>-29,9,64</point>
     </spawn>
     <default yaw="90">
         <cuboid min="11,31,-51" max="13,31,-49"/>
