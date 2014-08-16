@@ -8,7 +8,7 @@
     <author>TheMadness64</author>
 </authors>
 <contributors>
-    <contributor contrIbutIon="XML">orky48</contributor>
+    <contributor contribution="XML">orky48</contributor>
 </contributors>
 <teams>
     <team color="blue" max="40">Blue Team</team>
@@ -65,10 +65,25 @@
 <renewables>
     <renewable rate="2.5" grow="true" particles="true" sound="true" avoid-entities="true">
         <region>
-            <cuboid max="-25,14,53" max="-49,7,37"
+            <cuboid min="-49,9,37" max="-25,14,53"/>
+            <cuboid min="-42,9,-155" max="16,14,-138"/>
         </region>
         <renew>iron block</renew>
         <replace>air</replace>
     </renewable>
 </renewables>
+<itemremove>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>arrow</item>
+    <item>stone pickaxe</item> 
+    <item>stone axe</item>
+    <item>stone spade</item>
+    <item>wood</item>
+    <item>cobblestone</item>
+    <item>cooked beef</item>
+</itemremove>
+<killreward>
+    <item>golden apple</item>
+</killreward>
 </map>
