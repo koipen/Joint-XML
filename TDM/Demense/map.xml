@@ -83,8 +83,8 @@
     <item>wood</item>
     <item>cobblestone</item>
     <item>cooked beef</item>
-	<item>leather helmet</item>
-	<item>leather chestplate</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
 </itemremove>
 <killreward>
     <item>golden apple</item>
