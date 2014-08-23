@@ -49,13 +49,13 @@
 </kits>
 <spawns>
 	<spawn team="blue" yaw="90" safe="true">
-		<cuboid min="182,52,56" max="189,52,62"/>
+		<cuboid min="182,32,56" max="189,52,62"/>
 	</spawn>
 	<spawn team="red" yaw="-90" safe="true">
-		<cuboid min="-23,52,63" max="-31,52,55"/>
+		<cuboid min="-23,32,63" max="-31,52,55"/>
 	</spawn>
 	<default yaw="180">
-		<cuboid min="78,50,84" max="80,50,86"/>
+		<cuboid min="78,30,84" max="80,50,86"/>
 	</default>
 </spawns>
 <filters>
@@ -69,9 +69,9 @@
 <regions>
 	<apply kit="speedregen">
 		<complement>
-			<cuboid min="76,22,57" max="82,22,61"/><!--Main Region-->
-			<cuboid min="81,22,58" max="82,22,60"/><!--Successor Region That Will Be subtracted From the Main Region-->
-			<cuboid min="77,22,58" max="76,22,60"/><!--Successor Region That Will Be subtracted From the Main Region-->
+			<cuboid min="76,2,57" max="82,2,61"/><!--Main Region-->
+			<cuboid min="81,2,58" max="82,2,60"/><!--Successor Region That Will Be subtracted From the Main Region-->
+			<cuboid min="77,2,58" max="76,2,60"/><!--Successor Region That Will Be subtracted From the Main Region-->
 		</complement>
 	</apply>
 	<apply enter="only-red" message="You may not enter your own wool room"!>
