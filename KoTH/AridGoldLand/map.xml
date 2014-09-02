@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<map proto="1.3.5">
+<name>Arid Gold Land</name>
+<version>0.1.1</version>
+<objective>Control the center hills and capture points</objective>
+<authors>
+    <author contributation="Map Building and XML">Captain_Elliott</author>
+    <author contributation="Map Building">Timothee38</author>
+    <author contributation="Map Building">OllieGamerZ</author>
+</authors>
+<teams>
+    <team color="blue" max="32" max-overfill="38">Blue Team</team>
+    <team color="red" max="32" max-overfill="38">Red Team</team>
+</teams>
+<kits>
+    <kit name="reset-inv" force="true">
+        <item slot="0">air</item>
+        <item slot="1">air</item>
+        <item slot="2">air</item>
+        <item slot="3">air</item>
+        <item slot="4">air</item>
+        <item slot="5">air</item>
+        <item slot="6">air</item>
+        <item slot="7">air</item>
+        <item slot="8">air</item>
+        <item slot="9">air</item>
+        <item slot="10">air</item>
+        <item slot="11">air</item>
+        <item slot="12">air</item>
+        <item slot="13">air</item>
+        <item slot="14">air</item>
+        <item slot="15">air</item>
+        <item slot="16">air</item>
+        <item slot="17">air</item>
+        <item slot="18">air</item>
+        <item slot="19">air</item>
+        <item slot="20">air</item>
+        <item slot="21">air</item>
+        <item slot="22">air</item>
+        <item slot="23">air</item>
+        <item slot="24">air</item>
+        <item slot="25">air</item>
+        <item slot="26">air</item>
+        <item slot="27">air</item>
+        <item slot="28">air</item>
+        <item slot="29">air</item>
+        <item slot="30">air</item>
+        <item slot="31">air</item>
+        <item slot="32">air</item>
+        <item slot="33">air</item>
+        <item slot="34">air</item>
+        <item slot="35">air</item>
+        <chestplate>air</chestplate>
+        <leggings>air</leggings>
+        <boots>air</boots>
+    </kit>
+    <kit name="spawn" force="true">
+        <item slot="0" damage="-3000">stone sword</item>
+        <item slot="1" damage="-3000">bow</item>
+        <item slot="28" amount="24">arrow</item>
+        <item slot="2" amount="16">stained glass</item>
+        <item slot="3" damage="8258">potion</item> <!--8min speed-->
+        <item slot="4" amount="64">golden carrot</item>
+        <chestplate>chainmail chestplate</chestplate>
+        <boots enchantment="protection fall:4">iron boots</boots>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet locked="true" color="993333">leather helment</helment>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet locked="true" color="334CB2">leather helment</helment>
+    </kit>
+    <kit name="5kills" parents="reset-inv">
+        <item slot="0" damage="-3000">stone sword</item>
+        <item slot="1" enchantments="arrow infinite:1" damage="-3000">bow</item>
+        <item slot="28">arrow</item>
+        <item slot="2" enchantments="knockback:1">gold axe</item>
+        <item slot="3" amount="16">stained glass</item>
+        <item slot="4" amount="64">golden carrot</item>
+        <chestplate>chainmail chestplate</chestplate>
+        <boots enchantments="protection fall:4">iron boots</boots>
+    </kit>
+    <kit name="10kills" parents="5kills">
+       <leggings>iron leggings</leggings>
+    </kit>
+    <kit name="15kills" parents="reset-inv">
+        <item slot="0" damage="-3000">iron sword</item>
+        <item slot="1" enchantments="arrow infinite:1" damage="-3000">bow</item>
+        <item slot="28">arrow</item>
+        <item slot="2" enchantments="knockback:1">gold axe</item>
+        <item slot="3" amount="16">stained glass</item>
+        <item slot="4" amount="4">golden apple</item>
+        <item slot="5" amount="64">golden carrot</item>
+        <chestplate>chainmail chestplate</chestplate>
+        <leggings>iron leggings</leggings>
+        <boots enchantments="protection fall:4">iron boots</boots>
+    </kit>
+    <kit name="20kills" parents="reset-inv">
+        <item slot="0" damage="-3000">iron sword</item>
+        <item slot="1" enchantments="arrow infinite:1" damage="-3000">bow</item>
+        <item slot="2" damage="365" enchantments="arrow infinite:1;arrow fire:1" >bow</item>
+        <item slot="28">arrow</item>
+        <item slot="3" enchantments="knockback:1">gold axe</item>
+        <item slot="4" amount="16">stained glass</item>
+        <item slot="5" amount="8">golden apple</item>
+        <item slot="6" amount="64">golden carrot</item>
+        <chestplate>chainmail chestplate</chestplate>
+        <leggings>iron leggings</leggings>
+        <boots enchantments="protection fall:4">diamond boots</boots>
+    <kit>
+</kits>
+<spawns>
+    <spawn team="blue" kit="blue" yaw="0">
+        <point>-4,50,-105</point>
+    </spawn>
+    <spawn team="red" kit="red" yaw="180">
+        <point>5,50,-148</point>
+    </spawn>
+    <default yaw="90">
+        <cylinder base="136,148,23" radius="2" height="0"/>                                      
+    </default>
+</spawns>
+<king>
+    <hills>
+        <hill name="Gold Mine" capture-time="10s" points="2" id="main-hill">
+            <capture>
+                <cylinder base="7,11,21" radius="5" height="2"/>
+            </capture>
+            <progress>
+                <cylinder base="7,11,21" radius="5" height="2"/>
+            </progress>
+        </hill>
+        <hill name="Blue Capture Point" capture-time="5s" potints="1">
+            <capture>
+                <cylinder base="63,33,-29" radius="5" height="2"/>
+            </capture>
+            <progress>
+                <cylinder base="63,33,-29" radius="5" height="2"/>
+            </progress>
+            <capture-filter>
+                <filter name="only-red-capture"/>
+            </capture-filter>
+        </hill>
+        <hill name="Red Capture Point" capture-time="5s" potints="1">
+            <capture>
+                <cylinder base="-62,33,72" radius="5" height="2"/>
+            </capture>
+            <progress>
+                <cylinder base="-62,33,72" radius="5" height="2"/>
+            </progress>
+            <capture-filter>
+                <filter name="only-blue-capture"/>
+            </capture-filter>
+        </hill>
+    </hills>                        
+</king>
+<filters>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue-capture">
+        <objective team="blue">main-hill</objective>
+    </filter>
+    <filter name="only-red-capture">
+        <objective team="red">main-hill</objective>
+    </filter>
+    <filter name="blocks">
+        <block>stained glass</block>
+    </filter>
+</filters>
+<regions>
+    <rectangle name="all" min="-oo,-oo" max="oo,oo"/>
+    <!-- 
+        Sperate block filters so player only gets filter message if they try and place a block 
+    -->
+    <apply block-place="blocks" message="You may only place stained glass">
+        <region name="all"/>
+    </apply>
+    <apply block-break="blocks"> 
+        <region name="all"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter the enemy teams spawn!">
+        <rectangle min="10,-93" max="-10,-115"/>
+    </apply>
+    <apply enter="only-red" message="You may not enter the enemy teams spawn!">
+        <rectangle min="-9,136" max="11,157"/>
+    </apply>
+</regions>
+<killreward>
+    <filter>
+        <kill-streak count="5"/>
+    </filter>
+    <kit name="5kills"/>
+</killreward>
+<killreward>
+    <filter>
+        <kill-streak count="10"/>
+    </filter>
+    <kit name="10kills"/>
+</killreward>
+<killreward>
+    <filter>
+        <kill-streak count="15"/>
+    </filter>
+    <kit name="15kills"/>
+</killreward>
+<killreward>
+    <filter>
+        <kill-streak count="20"/>
+    </filter>
+    <kit name="20kills"/>
+</killreward>
+<itemremove>
+    <item>stained glass</item>
+    <item>stone sword</item>
+    <item>iron sword</item>
+    <item>bow</item>
+    <item>golden carrot</item>
+    <item>chainmail chestplate</item>
+    <item>iron boots</item>
+    <item>diamond boots</item>
+    <item>iron leggings</item>
+</itemremove>
+</map>
