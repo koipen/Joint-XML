@@ -107,7 +107,7 @@
 		<chestplate>chainmail chestplate</chestplate>
 		<leggings>iron leggings</leggings>
 		<boots enchantments="protection fall:4">diamond boots</boots>
-	<kit>
+	</kit>
 </kits>
 <spawns>
 	<spawn team="blue" kit="blue" yaw="0">
