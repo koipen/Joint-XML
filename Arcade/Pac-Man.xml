@@ -1,2 +1,59 @@
 <?xml version="1.0"?>
-<map>
+<map proto="1.3.5">
+<name>Pac-Man</name>
+<version>1.0.0</version>
+<objective>As Pac-Man you must destroy all the coins. As a ghost kill Pac-Man 4 times.</objective>
+<authors>
+    <author>orky48</author>
+    <author>OllieGamerZ</author>
+</authors>
+<teams>
+    <team color="yellow" max="1" max-overfill="1">Pac-Man</team>
+    <team color="dark red" max="1" max-overfill="1">Red Ghost</team>
+    <team color="blue" max="1" max-overfill="1">Blue Ghost</team>
+    <team color="light purple" max="1" max-overfill="1">Pink Ghost</team>
+    <team color="gold" max="1" max-overfill="1">Orange Ghost</team>
+</teams>
+<kits>
+    <kit name="pac-man">
+        <item damage="-3000" enchantment="dig speed:3">gold pickaxe</item>
+        <item>map</item>
+        <potion duration="6" amplifier="2">speed</potion>
+        <potion duration="6" amplifier="5">resistence</potion>
+        <helmet locked="true" color="E5E533" damage="-3000">leather helmet</helmet>
+        <chestplate locked="true" color="E5E533" damage="-3000">leather chestplate</chestplate>
+        <leggings locked="true" color="E5E533" damage="-3000">leather leggings</leggings>
+        <boots locked="true" color="E5E533" damage="-3000">leather boots</boots>
+    </kit>
+    <kit name="ghost">
+        <potion duration="oo" aplifier="4">resistance</potion>
+        <item damage="-3000" enchantment="damage all:10">iron sword</item>
+    </kit>
+    <kit name="red" parents="ghost">
+        <helmet locked="true" color="993333" damage="-3000">leather helmet</helmet>
+        <chestplate locked="true" color="993333" damage="-3000">leather chestplate</chestplate>
+        <leggings locked="true" color="993333" damage="-3000">leather leggings</leggings>
+        <boots locked="true" color="993333" damage="-3000">leather boots</boots>
+    </kit>
+    <kit name="blue" parents="ghost">
+        <helmet locked="true" color="334CB2" damage="-3000">leather helmet</helmet>
+        <chestplate locked="true" color="334CB2" damage="-3000">leather chestplate</chestplate>
+        <leggings locked="true" color="334CB2" damage="-3000">leather leggings</leggings>
+        <boots locked="true" color="334CB2" damage="-3000">leather boots</boots>
+    </kit>
+    <kit name="pink" parents="ghost">
+        <helmet locked="true" color="F27FA5" damage="-3000">leather helmet</helmet>
+        <chestplate locked="true" color="F27FA5" damage="-3000">leather chestplate</chestplate>
+        <leggings locked="true" color="F27FA5" damage="-3000">leather leggings</leggings>
+        <boots locked="true" color="F27FA5" damage="-3000">leather boots</boots>
+    </kit>
+    <kit name="gold" parents="ghost">
+        <helmet locked="true" color="D87F33" damage="-3000">leather helmet</helmet>
+        <chestplate locked="true" color="D87F33" damage="-3000">leather chestplate</chestplate>
+        <leggings locked="true" color="D87F33" damage="-3000">leather leggings</leggings>
+        <boots locked="true" color="D87F33" damage="-3000">leather boots</boots>
+    </kit>
+</kits>
+<spawns>
+    
+</spawns>
