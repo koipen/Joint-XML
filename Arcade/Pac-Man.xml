@@ -28,7 +28,7 @@
     </kit>
     <kit name="ghost">
         <potion duration="oo" aplifier="4">resistance</potion>
-        <potion duration="oo" amplifier="-100">jump</potion>
+        <potion duration="oo" amplifier="-5">jump</potion>
         <item damage="-3000" enchantment="damage all:10">iron sword</item>
         <knockback-reduction>0</knockback-reduction>
     </kit>
