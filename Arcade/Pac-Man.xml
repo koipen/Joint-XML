@@ -99,7 +99,7 @@
             <block>stained clay</block>
         </filter>
         <drops>
-            <item slot="1" damage="8227" potions="resistance:300:5:false;strength:300:50">potion</item>
+            <item damage="8227" potions="resistance:300:5:false;strength:300:50">potion</item>
         </drops>
         <replacement>
             <block>air</block>
