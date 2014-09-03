@@ -1,2 +1,21 @@
 <?xml version="1.0.0"?>
 <map proto="1.3.5">
+<name>Graveyard</name>
+<version>1.1.0</version>
+<objective>
+    Eliminate the enemy team within 3 minutes.
+</objective>
+<authors>
+    <author>Shadowbladz</author>
+</authors>
+<contributors>
+    <contributor contribution="Finally doing XML">orky48</contributor>
+</contributors>
+<teams>
+    <team color="black" max="24">Black Team</team>
+    <team color="gray" max="24">Gray Team</team>
+</teams>
+<kits>
+    <potion duration="120" amplifier="1">invisibilty</potion>
+    <item slot="0" enchantment="damage all:10">iron sword</item>
+</kits>
