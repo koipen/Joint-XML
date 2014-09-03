@@ -61,19 +61,19 @@
 </kits>
 <spawns>
     <spawn team="red" yaw="180" kit="red">
-        <cuboid min="-5,4,4" max="0,4,7"
+        <cuboid min="-5,4,4" max="0,4,7"/>
     </spawn>
     <spawn team="blue" yaw="180" kit="blue">
-        <cuboid min="-5,4,4" max="0,4,7"
+        <cuboid min="-5,4,4" max="0,4,7"/>
     </spawn>
     <spawn team="pink" yaw="180" kit="pink">
-        <cuboid min="-5,4,4" max="0,4,7"
+        <cuboid min="-5,4,4" max="0,4,7"/>
     </spawn>
     <spawn team="gold" yaw="180" kit="gold">
         <cuboid min="-5,4,4" max="0,4,7"/>
     </spawn>
     <spawn team="pac" kit="pac" yaw="0">
-        <point>-3,4,</point>
+        <point>-3,4,18</point>
     </spawn>
 </spawns>
 <filters>
