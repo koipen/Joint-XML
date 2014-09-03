@@ -20,6 +20,7 @@
         <item slot="1">map</item>
         <potion duration="6" amplifier="2">speed</potion>
         <potion duration="6" amplifier="5">resistence</potion>
+        <potion duration="oo" amplifier="-100">jump</potion>
         <helmet locked="true" color="E5E533" damage="-3000">leather helmet</helmet>
         <chestplate locked="true" color="E5E533" damage="-3000">leather chestplate</chestplate>
         <leggings locked="true" color="E5E533" damage="-3000">leather leggings</leggings>
@@ -27,6 +28,7 @@
     </kit>
     <kit name="ghost">
         <potion duration="oo" aplifier="4">resistance</potion>
+        <potion duration="oo" amplifier="-100">jump</potion>
         <item damage="-3000" enchantment="damage all:10">iron sword</item>
         <knockback-reduction>0</knockback-reduction>
     </kit>
