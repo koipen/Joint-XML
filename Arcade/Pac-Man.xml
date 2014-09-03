@@ -19,7 +19,7 @@
         <item slot="0" damage="-3000" enchantment="dig speed:3">gold pickaxe</item>
         <item slot="1">map</item>
         <potion duration="6" amplifier="2">speed</potion>
-        <potion duration="6" amplifier="5">resistence</potion>
+        <potion duration="6" amplifier="5">resistance</potion>
         <potion duration="oo" amplifier="-100">jump</potion>
         <helmet locked="true" color="E5E533" damage="-3000">leather helmet</helmet>
         <chestplate locked="true" color="E5E533" damage="-3000">leather chestplate</chestplate>
