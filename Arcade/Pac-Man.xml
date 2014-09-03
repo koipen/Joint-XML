@@ -14,7 +14,7 @@
     <team color="light purple" max="1" max-overfill="1">Pink Ghost</team>
     <team color="gold" max="1" max-overfill="1">Orange Ghost</team>
 </teams>
-<kits>
+<kits potion-particles="false">
     <kit name="pac-man">
         <item slot="0" damage="-3000" enchantment="dig speed:3">gold pickaxe</item>
         <item slot="1">map</item>
@@ -81,8 +81,10 @@
 <filters>
     <filter name="coins">
         <all>
-            <block>stained clay:4</block>
-            <block>stained clay:0</block>
+            <any>
+                <block>stained clay:4</block>
+                <block>stained clay:0</block>
+            </any>
             <team>pac-man</team>
         </all>
     </filter>
@@ -109,7 +111,7 @@
     </rule>
 </blockdrops>
 <destroyables>
-    <destroyable name="coins" materials="stained clay:0;stained clay:4" show-progress="true" repairable="false">
+    <destroyable name="Coins" materials="stained clay:0;stained clay:4" show-progress="true" repairable="false">
         <cuboid min="-26,0,30" max="21,6,-18"/>
     </destroyable>
 </destroyables>
