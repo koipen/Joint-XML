@@ -16,7 +16,7 @@
 </teams>
 <kits>
     <kit name="pac-man">
-        <item slot="0"damage="-3000" enchantment="dig speed:3">gold pickaxe</item>
+        <item slot="0" damage="-3000" enchantment="dig speed:3">gold pickaxe</item>
         <item slot="1">map</item>
         <potion duration="6" amplifier="2">speed</potion>
         <potion duration="6" amplifier="5">resistence</potion>
