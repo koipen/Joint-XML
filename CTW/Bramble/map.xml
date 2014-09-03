@@ -25,6 +25,7 @@
         <item slot="7" amount="2">golden apple</item>
         <item slot="8" amount="64">golden carrot</item>
         <chestplate damage="-3000">chainmail chestplate</chestplate>
+        <potion duration="5" amplifier="4">damage resistance</potion>
     </kit>
     <kit name="blue" parents="spawn">
         <boots locked="true" color="334CB2" damage="-3000">leather boots</boots>
