@@ -16,8 +16,8 @@
 </teams>
 <kits>
     <kit name="pac-man">
-        <item damage="-3000" enchantment="dig speed:3">gold pickaxe</item>
-        <item>map</item>
+        <item slot="0"damage="-3000" enchantment="dig speed:3">gold pickaxe</item>
+        <item slot="1">map</item>
         <potion duration="6" amplifier="2">speed</potion>
         <potion duration="6" amplifier="5">resistence</potion>
         <helmet locked="true" color="E5E533" damage="-3000">leather helmet</helmet>
@@ -28,26 +28,31 @@
     <kit name="ghost">
         <potion duration="oo" aplifier="4">resistance</potion>
         <item damage="-3000" enchantment="damage all:10">iron sword</item>
+        <knockback-reduction>0</knockback-reduction>
     </kit>
     <kit name="red" parents="ghost">
+        <potion duration="5" amplifier="40">slowness</potion>
         <helmet locked="true" color="993333" damage="-3000">leather helmet</helmet>
         <chestplate locked="true" color="993333" damage="-3000">leather chestplate</chestplate>
         <leggings locked="true" color="993333" damage="-3000">leather leggings</leggings>
         <boots locked="true" color="993333" damage="-3000">leather boots</boots>
     </kit>
     <kit name="blue" parents="ghost">
+        <potion duration="10" amplifier="40">slowness</potion>
         <helmet locked="true" color="334CB2" damage="-3000">leather helmet</helmet>
         <chestplate locked="true" color="334CB2" damage="-3000">leather chestplate</chestplate>
         <leggings locked="true" color="334CB2" damage="-3000">leather leggings</leggings>
         <boots locked="true" color="334CB2" damage="-3000">leather boots</boots>
     </kit>
     <kit name="pink" parents="ghost">
+        <potion duration="15" amplifier="40">slowness</potion>
         <helmet locked="true" color="F27FA5" damage="-3000">leather helmet</helmet>
         <chestplate locked="true" color="F27FA5" damage="-3000">leather chestplate</chestplate>
         <leggings locked="true" color="F27FA5" damage="-3000">leather leggings</leggings>
         <boots locked="true" color="F27FA5" damage="-3000">leather boots</boots>
     </kit>
     <kit name="gold" parents="ghost">
+        <potion duration="20" amplifier="40">slowness</potion>
         <helmet locked="true" color="D87F33" damage="-3000">leather helmet</helmet>
         <chestplate locked="true" color="D87F33" damage="-3000">leather chestplate</chestplate>
         <leggings locked="true" color="D87F33" damage="-3000">leather leggings</leggings>
@@ -55,5 +60,65 @@
     </kit>
 </kits>
 <spawns>
-    
+    <spawn team="red" yaw="180" kit="red">
+        <cuboid min="-5,4,4" max="0,4,7"
+    </spawn>
+    <spawn team="blue" yaw="180" kit="blue">
+        <cuboid min="-5,4,4" max="0,4,7"
+    </spawn>
+    <spawn team="pink" yaw="180" kit="pink">
+        <cuboid min="-5,4,4" max="0,4,7"
+    </spawn>
+    <spawn team="gold" yaw="180" kit="gold">
+        <cuboid min="-5,4,4" max="0,4,7"/>
+    </spawn>
+    <spawn team="pac" kit="pac" yaw="0">
+        <point>-3,4,</point>
+    </spawn>
 </spawns>
+<filters>
+    <filter name="coins">
+        <all>
+            <block>stained clay:4</block>
+            <block>stained clay:0</block>
+            <team>pac-man</team>
+        </all>
+    </filter>
+</filters>
+<regions>
+    <apply block-break="coins" message="You may only break the coins in this map">
+        <rectangle min="oo" max="oo"/>
+    </apply>
+</regions>
+<blockdrops>
+    <rule>
+        <region>
+            <cuboid min="-26,0,30" max="21,6,-18"/>
+        </region>
+        <filter>
+            <block>stained clay</block>
+        </filter>
+        <drops>
+            <item slot="1" damage="8227" potions="resistance:300:5:false;strength:300:50">potion</item>
+        </drops>
+        <replacement>
+            <block>air</block>
+        </replacement>
+    </rule>
+</blockdrops>
+<destroyables>
+    <destroyable name="coins" materials="stained clay:0;stained clay:4" show-progress="true" repairable="false">
+        <cuboid min="-26,0,30" max="21,6,-18"/>
+    </destroyable>
+</destroyables>
+<itemremove>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>gold pickaxe</item>
+    <item>stained clay</item>
+    <item>iron sword</item>
+    <item>map</item>
+</itemremove>
+</map>
