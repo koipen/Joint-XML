@@ -122,7 +122,7 @@
 </spawns>
 <king>
 	<hills>
-		<hill name="Gold Mine" capture-time="10s" points="2" id="main-hill">
+		<hill name="Gold Mine" capture-time="10s" points="2">
 			<capture>
 				<cylinder base="7,11,21" radius="5" height="2"/>
 			</capture>
@@ -137,9 +137,6 @@
 			<progress>
 				<cylinder base="63,33,-29" radius="5" height="2"/>
 			</progress>
-			<capture-filter>
-				<filter name="only-red-capture"/>
-			</capture-filter>
 		</hill>
 		<hill name="Red Capture Point" capture-time="5s" potints="1">
 			<capture>
@@ -148,9 +145,6 @@
 			<progress>
 				<cylinder base="-62,33,72" radius="5" height="2"/>
 			</progress>
-			<capture-filter>
-				<filter name="only-blue-capture"/>
-			</capture-filter>
 		</hill>
 	</hills>                        
 </king>
@@ -160,15 +154,6 @@
 	</filter>
 	<filter name="only-red">
 		<team>red</team>
-	</filter>
-	<filter name="only-blue-capture">
-		<objective team="blue">main-hill</objective>
-	</filter>
-	<filter name="only-red-capture">
-		<objective team="red">main-hill</objective>
-	</filter>
-	<filter name="blocks">
-		<block>stained glass</block>
 	</filter>
 </filters>
 <regions>
