@@ -3,7 +3,38 @@
 <name>Takeshi's Run</name>
 <version>1.0.0</version>
 <authors>
-  <author>orky48</author>
-  <author>_IQ</author>
+    <author>orky48</author>
+    <author>_IQ</author>
 </authors>
-
+<kits>
+    <kit name="spawn">
+        <helmet name="Saftey Helmet" color="993333">leather helmet</helmet>
+        <chestplate enchantment="protection projectile">leather chestplate</chestplate>
+        <leggings enchantment="protection projectile">leather leggings</leggings>
+    </kit>
+    <kit name="death">
+        <potion duration="1" amplifier="100">harm</potion>
+    </kit>
+    <kit name="slow" force="true">
+        <potion duration="10" amplifier="2">slow</potion>
+    </kit>
+    <kit name="confusion" force="true">
+        <potion duration="10" amplifier="4">confusion</potion>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="Contestants" yaw="0">
+        <cuboid min="-30,8,-100" max="12,8,-96"/>
+    </spawn>
+    <default>
+        <cuboid min="-10,28,-111" max="-8,29,-109"/>
+    </default>
+</spawns>
+<regions>
+    <apply kit="confusion">
+        <cuboid min="" max=""/>
+        <filter>
+            <random>0.1</random>
+        </filter>
+    </apply>
+</regions>
