@@ -71,7 +71,7 @@
         <cuboid min="61,41,-26" max="62,44,-25"/>
     </destroyable>
     <destroyable owner="red">
-        <cuboid min="61,41,72" max="62,44,73"
+        <cuboid min="61,41,72" max="62,44,73"/>
     </destroyable>
 </destroyables>
 <toolrepair>
@@ -81,3 +81,4 @@
     <tool>stone spade</tool>
     <tool>diamond axe</tool>
 </toolrepair>
+</map>
