@@ -47,23 +47,18 @@
         <cuboid min="115,84,22" max="118,24,25"/>
     </default>
 </spawns>
-<filters>
-    
-</filters>
 <regions>
     <apply block="deny-all" message="You may not build outside of the map">
         <negative>
-            <cuboid min="0,0,-54" max="101,70,101"/>
+            <complement>
+                <cuboid min="0,0,-54" max="101,70,101"/>
+                <cuboid min="0,50,11" max="101,oo,-37"/>
+            </complement>
         </negative>
     </apply>
     <apply block="deny-all" message="You may not edit the team spawns!">
         <cuboid name="blue-spawn" min="0,42,-54" max="12,55,-35"/>
         <cuboid name="red-spawn" min="0,42,82" max="12,55,101"/>
-    </apply>
-    <apply block="deny-all" message="The max build height here is only 50 blocks!">
-        <negative>
-            <cuboid min="0,0,11" max="101,50,-37"/>
-        </negative>
     </apply>
 </regions>
 <destroyables name="Monument" materials="obsidian">
@@ -80,5 +75,12 @@
     <tool>stone axe</tool>
     <tool>stone spade</tool>
     <tool>diamond axe</tool>
+    <tool>boat</tool>
 </toolrepair>
+<itemremove>
+    <item>obsidian</item>
+    <item>leather chestplaye</item>
+    <item>leather boots</item>
+    <item>cooked beef</item>
+</itemremove>
 </map>
