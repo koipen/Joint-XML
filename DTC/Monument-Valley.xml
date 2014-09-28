@@ -17,12 +17,12 @@
 </teams>
 <kits>
     <kit name="spawn">
-        <item slot="0" durability="-3000">stone sword</item>
-        <item slot="1" durability="-3000">bow</item>
+        <item slot="0" damage="-3000">stone sword</item>
+        <item slot="1" damage="-3000">bow</item>
         <item slot="28" amount="32">arrow</item>
-        <item slot="2" durability="-3000">diamond pickaxe</item>
-        <item slot="3" durability="-3000">stone axe</item>
-        <item slot="4" durability="-3000">stone spade</item>
+        <item slot="2" damage="-3000">diamond pickaxe</item>
+        <item slot="3" damage="-3000">stone axe</item>
+        <item slot="4" damage="-3000">stone spade</item>
         <item slot="5" amount="32">wood</item>
         <item slot="6" amount="32">cooked beef</item>
         <item slot="7">boat</item>
@@ -83,4 +83,5 @@
     <item>leather boots</item>
     <item>cooked beef</item>
 </itemremove>
+<timelock>on</timelock>
 </map>
