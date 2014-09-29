@@ -6,6 +6,9 @@
     <author>orky48</author>
     <author>_IQ</author>
 </authors>
+<teams>
+    <team 
+</teams>
 <kits>
     <kit name="spawn">
         <helmet name="Saftey Helmet" color="993333">leather helmet</helmet>
