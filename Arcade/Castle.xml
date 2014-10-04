@@ -10,10 +10,11 @@
     <team max="100" color="dark red">Contestants</team>
 </teams>
 <kits>
-    <kit name="spawn">
+    <kit name="spawn" potion-particles="false">
         <helmet name="Saftey Helmet" color="993333" damage="-3000" locked="true">leather helmet</helmet>
         <chestplate enchantment="protection projectile:1" damage="-3000" locked="true">leather chestplate</chestplate>
         <leggings enchantment="protection projectile:1" damage="-3000" locked="true">leather leggings</leggings>
+        <potion duration="oo" amplifier="9">slow digging</potion>
     </kit>
     <kit name="death">
         <potion duration="1" amplifier="100">harm</potion>
@@ -64,9 +65,14 @@
         </filter>
     </apply>
 </regions>
+<blitz>
+    <time>5m</time>
+    <lives>1</lives>
+    <title>Takeshi's Castle</title>
+</blitz>
 <wools>
     <wool color="white" team="contestants">
-        
+        <block>-8.5,8,118</block>
     </wool>
 </wools>
 <hunger>
