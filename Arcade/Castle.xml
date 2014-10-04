@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<map proto="1.3.5">
+<map proto="1.3.3">
 <name>Takeshi's Run</name>
 <version>1.0.0</version>
 <authors>
@@ -11,9 +11,9 @@
 </teams>
 <kits>
     <kit name="spawn">
-        <helmet name="Saftey Helmet" color="993333" locked="true">leather helmet</helmet>
-        <chestplate enchantment="protection projectile" locked="true">leather chestplate</chestplate>
-        <leggings enchantment="protection projectile" locked="true">leather leggings</leggings>
+        <helmet name="Saftey Helmet" color="993333" damage="-3000" locked="true">leather helmet</helmet>
+        <chestplate enchantment="protection projectile:1" damage="-3000" locked="true">leather chestplate</chestplate>
+        <leggings enchantment="protection projectile:1" damage="-3000" locked="true">leather leggings</leggings>
     </kit>
     <kit name="death">
         <potion duration="1" amplifier="100">harm</potion>
@@ -34,6 +34,9 @@
     </default>
 </spawns>
 <regions>
+    <apply block="deny-all">
+        <rectangle min="-oo,-oo" max="oo,oo"/>
+    </apply>
     <union name="doors">
         <!-- doors are start to end -->
         <cuboid min="-30,10,-83" max="12,12,-80"/>
@@ -61,3 +64,13 @@
         </filter>
     </apply>
 </regions>
+<wools>
+    <wool color="white" team="contestants">
+        
+    </wool>
+</wools>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<autorespawn/>
+<timelock>on</timelock>
