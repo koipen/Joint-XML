@@ -108,4 +108,6 @@
     <tool>diamond pickaxe</tool>
     <tool>iron axe</tool>
 </toolrepair>
+<multitrade/>
+<timelock>on</timelock>
 </map>
