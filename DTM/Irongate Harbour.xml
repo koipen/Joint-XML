@@ -1,2 +1,17 @@
 <?xml version="1.0"?>
 <map proto="1.3.5">
+<name>Irongate Harbour</name>
+<version>1.0.0</version>
+<objective>Destroy the enemy's two monuments</objective>
+<authors>
+  <author contribution="Buildings, Concept and Map Design">koipen</author>
+  <author contribution="Aestheics, Buildings and Map Design">Eclipsen</author>
+</authors>
+<contributors>
+  <contributor contribution="Feedback">Timothee38</contributor>
+  <contributor contribution="Building Design and Inspiration">madness64</contributor>
+  <contributor contribution=" Aesthetics and Feedback">EnarRikardz</contributor>
+  <contributor contribution="Feedback">_IQ</contributor>
+  <contributor contribution="Pos-processing help">Tywnis</contributor>
+  <contributor contribution="XML">orky48</contributor>
+</contributors>
