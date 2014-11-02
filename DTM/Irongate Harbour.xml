@@ -63,6 +63,13 @@
     <apply block="deny-all" message="You may not build above 45 blocks over the sea">
         <cuboid name="sea-limit" min="91,45,-2" max="170,oo,62"/>
     </apply>
+    <apply block="deny-all" message="You may not build above 60 in this area">
+        <complement>
+            <cuboid min="-oo,60,-oo" max="oo,oo,oo"/>
+            <region name="hill-limit"/>
+            <region name="sea-limit"/>
+        </complement>
+    </apply>
     <union name="spawns">
         <cuboid name="blue-spawn" min="252,43,8" max="274,55,15"/>
         <cuboid name="red-spawn" min="-15,43,8" max="6,55,15"/>
