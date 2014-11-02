@@ -73,9 +73,20 @@
     <apply block="no-void" message="You may not build in the void."/>
 </regions>
 <destroyables>
+    <destroyables name="North Monument" materials="obsidian">
+        <destroyable owner="blue">
+            <cuboid min="229,51,-12" max="230,54,-13"/>
+        </destroyable>
+        <destroyable owner="red">
+            <cuboid min="29,51,-12" max="30,54,-13"/>
+        </destroyable>
+    </destroyables>
     <destroyables name="South Monument" materials="obsidian">
         <destroyable owner="blue">
-            
+            <cuboid min="222,48,32" max="223,51,33"/>
+        </destroyable>
+        <destroyable owner="red">
+            <cuboid min="36,48,32" max="37,51,33"/>
         </destroyable>
     </destroyables>
 </destroyables>
