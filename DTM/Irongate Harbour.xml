@@ -4,14 +4,57 @@
 <version>1.0.0</version>
 <objective>Destroy the enemy's two monuments</objective>
 <authors>
-  <author contribution="Buildings, Concept and Map Design">koipen</author>
-  <author contribution="Aestheics, Buildings and Map Design">Eclipsen</author>
+    <author contribution="Buildings, Concept and Map Design">koipen</author>
+    <author contribution="Aestheics, Buildings and Map Design">Eclipsen</author>
 </authors>
 <contributors>
-  <contributor contribution="Feedback">Timothee38</contributor>
-  <contributor contribution="Building Design and Inspiration">madness64</contributor>
-  <contributor contribution=" Aesthetics and Feedback">EnarRikardz</contributor>
-  <contributor contribution="Feedback">_IQ</contributor>
-  <contributor contribution="Pos-processing help">Tywnis</contributor>
-  <contributor contribution="XML">orky48</contributor>
+    <contributor contribution="Feedback">Timothee38</contributor>
+    <contributor contribution="Building Design and Inspiration">madness64</contributor>
+    <contributor contribution="Aesthetics and Feedback">EnarRikardz</contributor>
+    <contributor contribution="Aesthetics and Feedback">_IQ</contributor>
+    <contributor contribution="Post-processing help">Tywnis</contributor>
+    <contributor contribution="XML">orky48</contributor>
 </contributors>
+<teams>
+    <team color="blue" max="50" id="blue">Blue Team</team>
+    <team color="dark red" max="50" id="red">Red Team</team>
+</teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0">stone sword</item>
+        <item slot="1">bow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3">iron axe</item>
+        <item slot="4" amount="64">cooked fish</item>
+        <item slot="5" amount="64">wood</item>
+        <item slot="25" amount="64">arrow</item>
+        <item slot="26" amount="64">arrow</item>
+        <potion duration="7" amplifier="1">heal</potion>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <chestplate color="0066cc">leather chestplate</chestplate>
+    </kit>
+    <kit name="red" parents="spawn">
+        <chestplate color="cd0000">leather chestplate</chestplate>
+    </kit>
+</kits>
+<filters>
+    <filter name="no-void">
+        <deny>
+            <void/>
+        </deny>
+    </filter>
+</filters>
+<regions>
+    <apply block="deny-all" message="You may not build above 65 over the hillside">
+        <cuboid name="hill-limit" min="72,65,-50" max="189,oo,-2"/>
+    </apply>
+    <apply block="deny-all" message="You may not build above 45 blocks over the sea">
+        <cuboid name="sea-limit" min="91,45,-2" max="170,oo,62"/>
+    </apply>
+    <union name="spawns">
+        <cuboid name="blue spawn" min="252,0,8" max="274,55,15"/>
+        
+    </union>
+    <apply block="no-void" message="You may not build in the void."/>
+</regions>
