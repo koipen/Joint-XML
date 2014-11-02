@@ -38,6 +38,17 @@
         <chestplate color="cd0000">leather chestplate</chestplate>
     </kit>
 </kits>
+<spawns>
+    <spawn team="blue" kit="blue" yaw="90">
+        <point>268.5,44,11.5</point>
+    </spawn>
+    <spawn team="red" kit="red" yaw="-90">
+        <point>-9.5,44,11.5</point>
+    </spawn>
+    <default yaw="180">
+        <point>131.5,77,72.5</point>
+    </default>
+</spawns>
 <filters>
     <filter name="no-void">
         <deny>
@@ -53,8 +64,24 @@
         <cuboid name="sea-limit" min="91,45,-2" max="170,oo,62"/>
     </apply>
     <union name="spawns">
-        <cuboid name="blue spawn" min="252,0,8" max="274,55,15"/>
-        
+        <cuboid name="blue-spawn" min="252,43,8" max="274,55,15"/>
+        <cuboid name="red-spawn" min="-15,43,8" max="6,55,15"/>
     </union>
+    <apply block="deny-all" message="You may not edit the spawns">
+        <region name="spawns"/>
+    </apply>
     <apply block="no-void" message="You may not build in the void."/>
 </regions>
+<destroyables>
+    
+</destroyables>
+<itemremove>
+    <item>leather chestplate</item>
+    <item>flint</item>
+</itemremove>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
