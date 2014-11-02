@@ -73,11 +73,16 @@
     <apply block="no-void" message="You may not build in the void."/>
 </regions>
 <destroyables>
-    
+    <destroyables name="South Monument" materials="obsidian">
+        <destroyable owner="blue">
+            
+        </destroyable>
+    </destroyables>
 </destroyables>
 <itemremove>
     <item>leather chestplate</item>
     <item>flint</item>
+    <item>obsidian</item>
 </itemremove>
 <toolrepair>
     <tool>stone sword</tool>
@@ -85,3 +90,4 @@
     <tool>diamond pickaxe</tool>
     <tool>iron axe</tool>
 </toolrepair>
+</map>
