@@ -84,18 +84,18 @@
 <destroyables>
     <destroyables name="North Monument" materials="obsidian">
         <destroyable owner="blue">
-            <cuboid min="229,51,-12" max="230,54,-13"/>
+            <cuboid min="229,50,-12" max="230,53,-13"/>
         </destroyable>
         <destroyable owner="red">
-            <cuboid min="29,51,-12" max="30,54,-13"/>
+            <cuboid min="29,50,-12" max="30,53,-13"/>
         </destroyable>
     </destroyables>
     <destroyables name="South Monument" materials="obsidian">
         <destroyable owner="blue">
-            <cuboid min="222,48,32" max="223,51,33"/>
+            <cuboid min="222,47,32" max="223,50,33"/>
         </destroyable>
         <destroyable owner="red">
-            <cuboid min="36,48,32" max="37,51,33"/>
+            <cuboid min="36,47,32" max="37,50,33"/>
         </destroyable>
     </destroyables>
 </destroyables>
